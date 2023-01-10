@@ -1,0 +1,795 @@
+# Copyright (C) 2022 editorx
+# This file is distributed under the same license as the editorx package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Editorx\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-10 06:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: CodeGearThemes <support@codegearthemes.com>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. %1$1s, %2$2s theme copyright tags
+#: includes/functions/theme-functions.php:145
+#, php-format
+msgid "%1$1s. <small class=\"credit\">Proudly powered by %2$2s</small>"
+msgstr ""
+
+#: includes/customizer/options/footer.php:154
+#, php-format
+msgid "%1$1s. Proudly powered by %2$2s"
+msgstr ""
+
+#: includes/functions/template-functions.php:88
+#: includes/functions/template-functions.php:98
+#: includes/functions/template-functions.php:108
+#: includes/functions/template-functions.php:120
+#: includes/functions/template-functions.php:132
+#, php-format
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: includes/customizer/options/typography.php:157
+msgid "(H1 - h6) heading font size."
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: includes/functions/template-tags.php:115
+msgid ", "
+msgstr ""
+
+#. %s: post title
+#: includes/functions/template-tags.php:87
+#, php-format
+msgid "0 Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: includes/customizer/options/layout.php:144
+msgid "2"
+msgstr ""
+
+#: includes/customizer/options/layout.php:145
+msgid "3"
+msgstr ""
+
+#: includes/customizer/options/layout.php:146
+msgid "4"
+msgstr ""
+
+#: 404.php:28
+msgid "404"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:278
+msgid "404 Not Found"
+msgstr ""
+
+#. %s: post author
+#: includes/functions/template-tags.php:50
+#, php-format
+msgid "<span class=\"author-label\">By </span>%s"
+msgstr ""
+
+#. %s: post date
+#: includes/functions/template-tags.php:29
+#, php-format
+msgid "<span class=\"date-label\"> </span>%s"
+msgstr ""
+
+#: functions.php:198 functions.php:208 functions.php:218 functions.php:228
+msgid "Add widgets here to display to displays content on the footer section."
+msgstr ""
+
+#: functions.php:188
+msgid "Add widgets here."
+msgstr ""
+
+#: includes/customizer/options/layout.php:23
+msgid "Archive layout"
+msgstr ""
+
+#: includes/customizer/options/layout.php:38
+msgid "Archive tabs"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:279
+msgid "Archives"
+msgstr ""
+
+#: includes/customizer/options/footer.php:114
+#: includes/customizer/options/footer.php:199
+msgid "Background color"
+msgstr ""
+
+#: includes/customizer/options/typography.php:392
+#: includes/customizer/options/typography.php:527
+msgid "Body"
+msgstr ""
+
+#: includes/customizer/options/typography.php:407
+msgid "Body font"
+msgstr ""
+
+#: includes/customizer/options/colors.php:148
+msgid "Border color"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:276
+msgctxt "breadcrumbs aria label"
+msgid "Breadcrumbs"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:275
+msgid "Browse:"
+msgstr ""
+
+#. Name of the template
+msgid "Builder"
+msgstr ""
+
+#: includes/customizer/options/colors.php:196
+msgid "Button Hover Color"
+msgstr ""
+
+#: includes/customizer/options/colors.php:179
+msgid "Button Text Color"
+msgstr ""
+
+#: includes/customizer/options/layout.php:354
+msgid "Center"
+msgstr ""
+
+#: includes/public/class-editorx-header.php:85
+msgid "Close"
+msgstr ""
+
+#. Author of the theme
+msgid "CodeGearThemes"
+msgstr ""
+
+#: includes/customizer/options/layout.php:141
+msgid "Columns"
+msgstr ""
+
+#. %s is the page number.
+#: extension/breadcrumb/breadcrumb.php:285
+#, php-format
+msgid "Comment Page %s"
+msgstr ""
+
+#: comments.php:69
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:41
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/customizer/options/general.php:19
+#: includes/customizer/options/general.php:33
+msgid "Container"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/single/content.php:42
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: includes/customizer/options/footer.php:126
+msgid "Copyright"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:801
+#: extension/breadcrumb/breadcrumb.php:1230
+msgctxt "daily archives date format"
+msgid "j"
+msgstr ""
+
+#: includes/customizer/options/header.php:84
+msgid "Default"
+msgstr ""
+
+#: includes/customizer/options/footer.php:59
+msgid "Disabled"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:35 includes/functions/template-tags.php:180
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#. Name of the theme
+#: includes/functions/theme-functions.php:148
+msgid "Editorx"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Editorx is an modern WordPress theme with pixel perfect design and extensive "
+"functionality to create your own professional and unique websites."
+msgstr ""
+
+#: includes/customizer/options/header.php:126
+msgid "Enable Header Search"
+msgstr ""
+
+#: includes/customizer/options/header.php:106
+msgid "Enable Social icons"
+msgstr ""
+
+#: functions.php:146
+msgid "Extra large"
+msgstr ""
+
+#: includes/functions/template-functions.php:88
+msgid "Facebook"
+msgstr ""
+
+#: includes/customizer/options/general.php:36
+msgid "Fixed"
+msgstr ""
+
+#: includes/customizer/options/typography.php:553
+msgid "Font size"
+msgstr ""
+
+#: functions.php:135 functions.php:141
+msgctxt "Font size"
+msgid "L"
+msgstr ""
+
+#: functions.php:129
+msgctxt "Font size"
+msgid "N"
+msgstr ""
+
+#: functions.php:123
+msgctxt "Font size"
+msgid "S"
+msgstr ""
+
+#: functions.php:147
+msgctxt "Font size"
+msgid "XL"
+msgstr ""
+
+#: functions.php:153
+msgctxt "Font size"
+msgid "XXL"
+msgstr ""
+
+#: functions.php:159
+msgctxt "Font size"
+msgid "XXXL"
+msgstr ""
+
+#: includes/customizer/options/typography.php:58
+#: includes/customizer/options/typography.php:429
+msgid "Font style"
+msgstr ""
+
+#: includes/customizer/controls/typography/class-control-typography.php:109
+msgid "Font weight"
+msgstr ""
+
+#: includes/customizer/controls/typography/class-control-typography.php:141
+msgid "Font weight bold"
+msgstr ""
+
+#: includes/customizer/controls/typography/class-control-typography.php:125
+msgid "Font weight medium"
+msgstr ""
+
+#: includes/customizer/options/footer.php:13
+msgid "Footer"
+msgstr ""
+
+#: includes/customizer/options/footer.php:37
+#: includes/customizer/options/footer.php:140
+msgid "Footer credit tabs"
+msgstr ""
+
+#: includes/customizer/options/footer.php:160
+msgid "Footer credits"
+msgstr ""
+
+#: functions.php:196
+msgid "Footer I"
+msgstr ""
+
+#: functions.php:206
+msgid "Footer II"
+msgstr ""
+
+#: functions.php:216
+msgid "Footer III"
+msgstr ""
+
+#: functions.php:226
+msgid "Footer IV"
+msgstr ""
+
+#: includes/customizer/options/footer.php:54
+msgid "Footer layout"
+msgstr ""
+
+#: includes/customizer/options/footer.php:23
+msgid "Footer widgets"
+msgstr ""
+
+#: includes/customizer/options/colors.php:114
+msgid "Form"
+msgstr ""
+
+#: includes/customizer/options/colors.php:131
+msgid "Form field background"
+msgstr ""
+
+#: includes/customizer/options/general.php:37
+msgid "Full Width"
+msgstr ""
+
+#: includes/customizer/options/colors.php:19
+#: includes/customizer/options/general.php:12
+#: includes/customizer/controls/tabs/class-control-tabs.php:40
+msgid "General"
+msgstr ""
+
+#: functions.php:158
+msgid "Gigantic"
+msgstr ""
+
+#: includes/customizer/options/layout.php:67
+msgid "Grid"
+msgstr ""
+
+#: includes/customizer/options/typography.php:183
+msgid "H1 font size"
+msgstr ""
+
+#: includes/customizer/options/typography.php:220
+msgid "H2 font size"
+msgstr ""
+
+#: includes/customizer/options/typography.php:257
+msgid "H3 font size"
+msgstr ""
+
+#: includes/customizer/options/typography.php:294
+msgid "H4 font size"
+msgstr ""
+
+#: includes/customizer/options/typography.php:331
+msgid "H5 font size"
+msgstr ""
+
+#: includes/customizer/options/typography.php:368
+msgid "H6 font size"
+msgstr ""
+
+#: includes/customizer/options/header.php:10
+msgid "Header"
+msgstr ""
+
+#: includes/customizer/options/layout.php:350
+msgid "Header alignment"
+msgstr ""
+
+#: includes/customizer/options/header.php:60
+msgid "Header Settings"
+msgstr ""
+
+#: includes/customizer/options/typography.php:156
+msgid "Heading"
+msgstr ""
+
+#: includes/customizer/options/footer.php:80
+msgid "Heading color"
+msgstr ""
+
+#: includes/customizer/options/typography.php:36
+msgid "Heading font"
+msgstr ""
+
+#: includes/customizer/options/typography.php:21
+msgid "Headings"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:277
+msgid "Home"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:783
+msgctxt "hour archives time format"
+msgid "g a"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://codegearthemes.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "https://www.codegearthemes.com/products/editorx"
+msgstr ""
+
+#: functions.php:152
+msgid "Huge"
+msgstr ""
+
+#: includes/functions/template-functions.php:120
+msgid "Instagram"
+msgstr ""
+
+#: template-parts/content-none.php:39
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: includes/customizer/options/typography.php:61
+#: includes/customizer/options/typography.php:432
+msgid "Italic"
+msgstr ""
+
+#: functions.php:134
+msgid "Large"
+msgstr ""
+
+#: functions.php:140
+msgid "Larger"
+msgstr ""
+
+#: includes/customizer/options/layout.php:12
+#: includes/customizer/options/layout.php:58
+msgid "Layout"
+msgstr ""
+
+#. %s: post title
+#: includes/functions/template-tags.php:163
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: includes/customizer/options/layout.php:353
+msgid "Left"
+msgstr ""
+
+#: includes/customizer/options/layout.php:102
+#: includes/customizer/options/layout.php:243
+#: includes/customizer/options/layout.php:284
+#: includes/customizer/options/layout.php:325
+msgid "Left Sidebar"
+msgstr ""
+
+#: includes/customizer/options/typography.php:97
+#: includes/customizer/options/typography.php:468
+msgid "Letter spacing"
+msgstr ""
+
+#: includes/customizer/options/typography.php:74
+#: includes/customizer/options/typography.php:445
+msgid "Line height"
+msgstr ""
+
+#: includes/customizer/options/footer.php:229
+msgid "Link color"
+msgstr ""
+
+#: includes/customizer/options/footer.php:245
+msgid "Link hover color"
+msgstr ""
+
+#: includes/functions/template-functions.php:108
+msgid "LinkedIn"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: includes/functions/template-tags.php:132
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: includes/customizer/options/header.php:36
+msgid "Logo width"
+msgstr ""
+
+#: includes/customizer/options/header.php:79
+msgid "Main Header layout"
+msgstr ""
+
+#: includes/public/class-editorx-header.php:78
+msgid "Menu"
+msgstr ""
+
+#: includes/customizer/options/layout.php:202
+msgid "Meta size"
+msgstr ""
+
+#. Minute archive title. %s is the minute time format.
+#: extension/breadcrumb/breadcrumb.php:287
+#, php-format
+msgid "Minute %s"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:749
+msgctxt "minute and hour archives time format"
+msgid "g:i a"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:766
+msgctxt "minute archives time format"
+msgid "i"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:800
+#: extension/breadcrumb/breadcrumb.php:856
+#: extension/breadcrumb/breadcrumb.php:1226
+msgctxt "monthly archives date format"
+msgid "F"
+msgstr ""
+
+#: single.php:58
+msgid "Next"
+msgstr ""
+
+#: home.php:78
+msgid "Next Posts"
+msgstr ""
+
+#: includes/customizer/options/layout.php:106
+#: includes/customizer/options/layout.php:247
+#: includes/customizer/options/layout.php:288
+#: includes/customizer/options/layout.php:329
+msgid "No Sidebar"
+msgstr ""
+
+#: functions.php:128 includes/customizer/options/typography.php:60
+#: includes/customizer/options/typography.php:431
+msgid "Normal"
+msgstr ""
+
+#: template-parts/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: includes/customizer/options/typography.php:62
+#: includes/customizer/options/typography.php:433
+msgid "Oblique"
+msgstr ""
+
+#. 1: title.
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: 404.php:23
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#. %s is the page number.
+#: extension/breadcrumb/breadcrumb.php:283
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: includes/customizer/options/layout.php:264
+msgid "Page layout"
+msgstr ""
+
+#: template-parts/content-page.php:21 template-parts/content.php:41
+#: template-parts/single/content.php:55
+msgid "Pages:"
+msgstr ""
+
+#: searchform.php:14
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: includes/customizer/options/layout.php:223
+msgid "Posts layout"
+msgstr ""
+
+#: single.php:57
+msgid "Previous"
+msgstr ""
+
+#: home.php:77
+msgid "Previous Posts"
+msgstr ""
+
+#: includes/customizer/options/colors.php:36
+msgid "Primary color"
+msgstr ""
+
+#: functions.php:65
+msgid "Primary Menu"
+msgstr ""
+
+#: includes/functions/theme-functions.php:30
+#: includes/functions/theme-functions.php:58
+msgid "Read More"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/snippets/content-related.php:41
+msgid "Related Posts"
+msgstr ""
+
+#: 404.php:32
+msgid "Return to Home"
+msgstr ""
+
+#: includes/customizer/options/layout.php:110
+#: includes/customizer/options/layout.php:251
+#: includes/customizer/options/layout.php:292
+#: includes/customizer/options/layout.php:333
+msgid "Right Sidebar"
+msgstr ""
+
+#: includes/public/class-editorx-header.php:123
+msgid "Search"
+msgstr ""
+
+#. %s: search query.
+#: search.php:47
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#. %s is the search query.
+#: extension/breadcrumb/breadcrumb.php:281
+#, php-format
+msgid "Search results for: %s"
+msgstr ""
+
+#: includes/customizer/options/colors.php:53
+msgid "Secondary color"
+msgstr ""
+
+#: functions.php:186 includes/customizer/options/layout.php:97
+#: includes/customizer/options/layout.php:238
+#: includes/customizer/options/layout.php:279
+#: includes/customizer/options/layout.php:320
+msgid "Sidebar"
+msgstr ""
+
+#: includes/customizer/options/footer.php:63
+#: includes/customizer/options/layout.php:63
+msgid "Simple"
+msgstr ""
+
+#: includes/customizer/options/layout.php:305
+msgid "Single layout"
+msgstr ""
+
+#: header.php:43
+msgid "Skip to content"
+msgstr ""
+
+#: functions.php:122
+msgid "Small"
+msgstr ""
+
+#: includes/customizer/options/socials.php:21
+msgid "Social Links"
+msgstr ""
+
+#: includes/customizer/options/socials.php:14
+msgid "Social Profiles"
+msgstr ""
+
+#: includes/customizer/options/socials.php:15
+msgid "Social settings"
+msgstr ""
+
+#: 404.php:31
+msgid "Sorry! Page not Found"
+msgstr ""
+
+#: template-parts/content-none.php:33
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: includes/customizer/controls/tabs/class-control-tabs.php:41
+msgid "Style"
+msgstr ""
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: includes/customizer/options/footer.php:97
+#: includes/customizer/options/footer.php:182
+msgid "Text color"
+msgstr ""
+
+#: includes/customizer/options/typography.php:122
+#: includes/customizer/options/typography.php:493
+msgid "Text transform"
+msgstr ""
+
+#: includes/customizer/options/layout.php:176
+msgid "Title size"
+msgstr ""
+
+#: includes/functions/template-functions.php:98
+msgid "Twitter"
+msgstr ""
+
+#: includes/customizer/options/typography.php:10
+msgid "Typography"
+msgstr ""
+
+#. 1: list of categories.
+#: includes/functions/template-tags.php:124
+msgctxt "Used before category names."
+msgid "<span class=\"cat-text screen-reader-text\">Categories</span>"
+msgstr ""
+
+#. 1: list of tags.
+#: includes/functions/template-tags.php:142
+msgctxt "Used before tag names."
+msgid "<span class=\"tags-text screen-reader-text\">Tags</span>"
+msgstr ""
+
+#: includes/public/class-editorx-header.php:118
+msgid "View Search"
+msgstr ""
+
+#: includes/customizer/options/colors.php:83
+msgid "Website"
+msgstr ""
+
+#. Weekly archive title. %s is the week date format.
+#: extension/breadcrumb/breadcrumb.php:289
+#, php-format
+msgid "Week %s"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:829
+msgctxt "weekly archives date format"
+msgid "W"
+msgstr ""
+
+#: extension/breadcrumb/breadcrumb.php:799
+#: extension/breadcrumb/breadcrumb.php:828
+#: extension/breadcrumb/breadcrumb.php:855
+#: extension/breadcrumb/breadcrumb.php:882
+#: extension/breadcrumb/breadcrumb.php:1222
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: includes/customizer/options/footer.php:161
+msgid "You can use the following tags: {copyright}, {year}, {site_title}"
+msgstr ""
+
+#: includes/functions/template-functions.php:132
+msgid "Youtube"
+msgstr ""

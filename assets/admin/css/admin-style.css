@@ -1,0 +1,1148 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ /*-----------------------------
+        Welcome
+-----------------------------*/
+.appearance_page_editorx  #setting-error-tgmpa{
+    display: none !important;
+}
+
+.notice.codegear-theme-dashboard-notice {
+    margin: 20px 0;
+    border: none;
+    box-shadow: none;
+    padding: 0 !important;
+}
+
+.codegear--theme-dashboard .codegear-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin: 0 0 20px -20px;
+    padding: 0px 20px;
+}
+
+.codegear--theme-dashboard .codegear-header .codegear-branding{
+    padding: 10px 20px 10px 0;
+    border-right: 1px solid #F0F0F1;
+}
+
+.codegear--theme-dashboard .codegear-header .codegear--documentation-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.codegear--theme-dashboard .section--hero-image{
+    background: #FFFFFF;
+    display: flex;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-content{
+    padding: 20px;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero--user-welcome{
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1E1E1E;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-title{
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #1E1E1E;
+}
+
+.codegear--theme-dashboard .section--hero-image .badge{
+    transform: translateY(-10px);
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.codegear--theme-dashboard .section--hero-image .badge-success{
+    background: #DEF3ED;
+    color: #3FB28F;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-description{
+    margin-top: 15px;
+    color: #1E1E1E;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-actions{
+    position: relative;
+    margin-top: 30px;
+}
+
+.codegear--theme-dashboard .button,
+.codegear--theme-dashboard .section--hero-image .hero-actions .button{
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 120px;
+    text-align: center;
+}
+
+.codegear--theme-dashboard .main-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.codegear--theme-dashboard .main-content .primary{
+    flex: 1 0 calc(100% - 296px);
+    max-width: calc(100% - 296px);
+    width: 100%;
+    margin-right: 20px;
+}
+
+.codegear--theme-dashboard .main-content .aside{
+    flex: 1 0 276px;
+    max-width:276px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.codegear--theme-dashboard .main-content .panel{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 2px;
+    margin-top: 25px;
+}
+
+.codegear--theme-dashboard .main-content .panel-head{
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.codegear--theme-dashboard .main-content .panel-head h3{
+    font-size: 0.8125rem;
+    margin: 0;
+}
+
+.codegear--theme-dashboard .main-content .panel-content {
+    height: 100%;
+    padding: 20px;
+}
+
+.codegear--theme-dashboard .main-content .panel-content .description{
+    margin-top: 15px;
+}
+
+.codegear--theme-dashboard .main-content .panel-content .action-button{
+    margin-top: 30px;
+}
+
+.codegear--theme-dashboard .main-content .panel-content .divider{
+    background: #F0F0F1;
+    width: calc(100% + 48px);
+    height: 1px;
+    margin: 20px -24px;
+}
+
+.codegear--theme-dashboard .codegear-header .upsell-promotion__links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+/* Feature Dashboard */
+.codegear--theme-dashboard .feature-tab {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.codegear--theme-dashboard .feature-tab .feature-tab-title {
+    font-size: 0.8125rem;
+    margin: 0 24px;
+    width: fit-content;
+    padding: 16px 0;
+    position: relative;
+    border-bottom: 4px solid #007CBA;
+}
+
+.codegear--theme-dashboard .feature-content .feature-content-list {
+    height: 100%;
+    padding: 24px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.codegear--theme-dashboard .feature-content .feature-content-list .list-row {
+    border: 1px solid #F8F9FD;
+    background: #F8F9FD;
+    border-radius: 4px;
+    padding: 30px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.codegear--theme-dashboard .feature-content .feature-content-list .list-row .badge.badge-success {
+    background: #DEF3ED;
+    color: #3FB28F;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 6px;
+    border-radius: 9px;
+    text-transform: uppercase;
+    height: fit-content;
+}
+
+.codegear--theme-dashboard .feature-content .feature-content-list .list-row .feature-name .main-feature {
+    font-weight: 600;
+}
+
+
+
+ /*-----------------------------
+        Premium Section
+-----------------------------*/
+
+.section-premium{
+	display: block !important;
+    padding: 10px 14px;
+    background: #f5f5f5;
+}
+
+.section-premium .accordion-section-title {
+    background: #f5f5f5 !important;
+    border: none !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-premium .accordion-section-title .button {
+    background: #4E7661;
+    color: #ffffff;
+    border: 1px solid #4E7661;
+    border-radius: 0;
+}
+
+.section-premium .accordion-section-title .button:hover {
+    background: #4E7661;
+    color: #fff;
+}
+
+
+/*-----------------------------
+        Welcome
+-----------------------------*/
+.codegear--theme-dashboard .codegear-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin: 0 0 20px -20px;
+    padding: 0px 20px;
+}
+
+.codegear--theme-dashboard .codegear-header .codegear-branding{
+    padding: 10px 20px 10px 0;
+    border-right: 1px solid #F0F0F1;
+}
+
+.codegear--theme-dashboard .codegear-header .codegear--documentation-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.codegear--theme-dashboard .section--hero-image{
+    background: #FFFFFF;
+    display: flex;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-content{
+    padding: 20px;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero--user-welcome{
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1E1E1E;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-title{
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #1E1E1E;
+}
+
+.codegear--theme-dashboard .section--hero-image .badge{
+    transform: translateY(-10px);
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.codegear--theme-dashboard .section--hero-image .badge-success{
+    background: #DEF3ED;
+    color: #3FB28F;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-description{
+    margin-top: 15px;
+    color: #1E1E1E;
+}
+
+.codegear--theme-dashboard .section--hero-image .hero-actions{
+    position: relative;
+    margin-top: 30px;
+}
+
+.codegear--theme-dashboard .button,
+.codegear--theme-dashboard .section--hero-image .hero-actions .button{
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 120px;
+    text-align: center;
+}
+
+.codegear--theme-dashboard .main-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.codegear--theme-dashboard .main-content .primary{
+    flex: 1 0 calc(100% - 296px);
+    max-width: calc(100% - 296px);
+    width: 100%;
+    margin-right: 20px;
+}
+
+.codegear--theme-dashboard .main-content .aside{
+    flex: 1 0 276px;
+    max-width:276px;
+    width: 100%;
+    margin-top: 0;
+}
+
+.codegear--theme-dashboard .main-content .panel{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 2px;
+    margin-top: 25px;
+}
+
+.codegear--theme-dashboard .main-content .panel-head{
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.codegear--theme-dashboard .main-content .panel-head h3{
+    font-size: 0.8125rem;
+    margin: 0;
+}
+
+.codegear--theme-dashboard .main-content .panel-content {
+    height: 100%;
+    padding: 20px;
+}
+
+.codegear--theme-dashboard .main-content .panel-content .description{
+    margin-top: 15px;
+}
+
+.codegear--theme-dashboard .main-content .panel-content .action-button{
+    margin-top: 30px;
+}
+
+.codegear--theme-dashboard .main-content .panel-content .divider{
+    background: #F0F0F1;
+    width: calc(100% + 48px);
+    height: 1px;
+    margin: 20px -24px;
+}
+
+.codegear--theme-dashboard .block-panel-head {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.codegear--theme-dashboard .block-panel-tabs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 960px){
+    .codegear--theme-dashboard .block-panel-tabs {
+        flex-direction: row;
+    }
+
+    .codegear--theme-dashboard .block-panel-tabs .block-panel-tab {
+        margin: -16px 0;
+        margin-right: 40px;
+        border-bottom: 4px solid transparent;
+    }
+
+    .codegear--theme-dashboard .block-panel-tab-active {
+        background: transparent;
+        border-color: #007CBA !important;
+        border-radius: 0;
+    }
+
+}
+
+
+
+.codegear--theme-dashboard .block-panel-head .block-panel-title {
+    font-size: 0.8125rem;
+    margin: 0;
+}
+
+.codegear--theme-dashboard .block-panel-tabs .block-panel-tab a {
+    display: block;
+    padding: 14px 16px;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+@media (min-width: 960px) {
+    .codegear--theme-dashboard .block-panel-tabs .block-panel-tab a {
+      display: inline-block;
+      padding: 16px 0;
+    }
+}
+
+
+
+.customize-pane-child{
+    height: 100% !important;
+}
+
+.customize-control{
+    margin-bottom: 25px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.customize-control .heading--title{
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*-----------------------------
+        Google Fonts
+-----------------------------*/
+.select2-container {
+    z-index: 999999 !important;
+    width: 100%;
+    max-width: 100%;
+}
+.select2-drop-mask,
+.select2-drop-active {
+    z-index: 500000 !important;
+}
+
+.google_fonts_select_control .google-fonts,
+.google_fonts_select_control .weight-style {
+	margin-bottom: 10px;
+}
+
+.google_fonts_select_control .google--fonts-heading{
+    margin-bottom: 5px;
+}
+
+.google_fonts_select_control select{
+    text-transform: capitalize;
+}
+
+/*-----------------------------
+        Scroll Bar
+-----------------------------*/
+.accordion-section-content::-webkit-scrollbar,
+.wp-full-overlay-sidebar-content::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f1f1f1;
+}
+.accordion-section-content::-webkit-scrollbar-thumb,
+.wp-full-overlay-sidebar-content::-webkit-scrollbar-thumb {
+    background-color: #d8d8d8;
+}
+.accordion-section-content::-webkit-scrollbar-track,
+.wp-full-overlay-sidebar-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.5);
+    width: 10px;
+}
+
+.range-slider .control-heading{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.range-slider .devices-preview{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 72px;
+}
+
+.range-slider .devices-preview button {
+    border: 0;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 3px;
+    color: #656A6F;
+}
+
+.range-slider .devices-preview button:hover,
+.range-slider .devices-preview button.active{
+    color: #2271b1;
+}
+
+.range-slider .devices-preview button i {
+    font-size: 16px;
+    line-height: 20px;
+    width: auto;
+}
+
+.range-slider .range-slider-inner{
+    display: none;
+    align-items: center;
+    justify-content: space-between
+}
+
+.range-slider .range-slider-inner.desktop.active,
+.range-slider .range-slider-inner.tablet.active,
+.range-slider .range-slider-inner.mobile.active {
+    display: flex;
+}
+
+.range-slider .range--slider-range {
+    -webkit-appearance: none;
+    width: calc(100% - 97px);
+    height: 2px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.range-slider .range--slider-value{
+    width: 60px !important;
+    border-color: #ddd;
+    border-radius: 2px;
+    outline: 0;
+}
+
+.range-slider .range--slider-value:hover,
+.range-slider .range--slider-value:focus,
+.range-slider .range--slider-value:active{
+    border-color: #1e8cbe;
+    box-shadow: unset;
+}
+
+.range-slider input::-webkit-outer-spin-button,
+.range-slider input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-slider input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.range-slider .range-slider-inner span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 28px;
+    background: #fff;
+    cursor: default;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+    align-self: auto;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #ddd;
+    border-radius: 0 2px 2px 0;
+}
+
+/*-----------------------------
+        Section Seperator
+-----------------------------*/
+.customize-pane-parent .control-section-separator {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    display: block !important;
+}
+
+.customize-control-divider .item-divider{
+    margin: 10px -15px;
+}
+
+#accordion-panel-nav_menus{
+    margin-top: 30px;
+}
+
+/*-----------------------------
+       Radio Image
+-----------------------------*/
+.customize-control-editorx-radio-image .radio-image{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.customize-control-editorx-radio-image .radio-image-one-half .image-item{
+    flex: 0 0 calc( 50% - 7px);
+    margin-top: 10px;
+}
+
+.customize-control-editorx-radio-image .radio-image-one-quarter .image-item{
+    flex: 0 0 calc( 20% - 7px);
+    margin-top: 10px;
+}
+
+.customize-control-editorx-radio-image .radio-image .label{
+    display: none;
+}
+
+.customize-control-editorx-radio-image .radio-image label img{
+    border: 1px solid transparent;
+    width: 100%;
+}
+
+.customize-control-editorx-radio-image .radio-image .image-item input:checked + label img{
+    border: 1px solid #2271b1;
+}
+
+/*-----------------------------
+       Tabs Control
+-----------------------------*/
+.customize-control-editorx-tabs-control .control-tabs {
+    margin: -15px -12px 0;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.customize-control-editorx-tabs-control .control-tab {
+    cursor: pointer;
+    height: 50px;
+    font-size: 16px;
+    text-align: center;
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.customize-control-editorx-tabs-control .control-tab:first-child{
+    border-right: 1px solid #dcdcde;
+}
+
+.customize-control-editorx-tabs-control .control-tab.active:after {
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    width: calc( 100% + 1px);
+    height: 2px;
+    position: absolute;
+    background-color: #2271b1;
+}
+
+.customize-control.hide-control {
+    visibility: hidden;
+    height: 0;
+    margin: 0 !important;
+  }
+
+/*-----------------------------
+       Switch Control
+-----------------------------*/
+.customize-control-editorx-switch .customize-control-title{
+    font-weight: normal;
+}
+
+.customize-control-editorx-switch .toggle-switch {
+    position: relative;
+    width: 45px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    float: right;
+}
+
+.customize-control-editorx-switch .toggle-switch .toggle-switch-checkbox {
+    display: none;
+}
+
+.customize-control-editorx-switch .toggle-switch .toggle-switch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.customize-control-editorx-switch .toggle-switch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    background: #c8c8c8;
+    height: 22px;
+}
+
+.customize-control-editorx-switch .toggle-switch-switch {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 3px;
+    bottom: 0;
+    right: 21px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    -webkit-transition: all 0.1s ease-in 0s;
+    transition: all 0.1s ease-in 0s;
+}
+
+/*-----------------------------
+       Radio Buttons
+-----------------------------*/
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-inner {
+    margin-left: 0;
+    background: #2271b1;
+}
+
+.toggle-switch-checkbox:checked + .toggle-switch-label .toggle-switch-switch {
+    right: 3px;
+}
+
+
+.text_radio_button_control:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.text_radio_button_control .radio-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #f9f9fe;
+}
+
+.text_radio_button_control .radio-button-label {
+    cursor: pointer;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.text_radio_button_control .radio-button-label > input {
+    display: none;
+}
+
+.text_radio_button_control .radio-button-label span {
+    cursor: pointer;
+    border: 1px solid #d0d0d0;
+    margin: 0;
+    padding: 8px 15px;
+    text-align: center;
+    display: block;
+    margin-left: -1px;
+}
+
+.text_radio_button_control .palette-radio-buttons {
+    position: absolute;
+    top: calc(100% + 5px);
+    display: none;
+    left: 12px;
+    width: calc(100% - 24px);
+    background-color: #fff;
+    z-index: 99;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 15px #0000001f;
+    box-shadow: 0 3px 15px #0000001f;
+}
+
+.text_radio_button_control .palette-radio-buttons.open {
+    display: block;
+}
+
+.palette-radio-buttons .radio-button-label .palette {
+    border-color: transparent;
+}
+
+.palette-radio-buttons .radio-button-label span {
+    border-radius: 0 !important;
+    margin-left: 0;
+}
+
+.text_radio_button_control .radio-button-label:first-of-type span {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.text_radio_button_control .radio-button-label:last-of-type span {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.text_radio_button_control .radio-button-label span:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #2271b1;
+}
+
+.text_radio_button_control .radio-button-label > input:checked + span {
+    background-color: #2271b1;
+    color: #fff;
+    fill: #fff;
+}
+
+.text_radio_button_control .palette-label > input:checked + span {
+    border-color: #317CB5;
+    background: transparent;
+}
+
+.text_radio_button_control .radio-button-label > input:checked + span:hover {
+    color: #fff;
+}
+
+.customize-control-radio-buttons input[value="underline"] + span{
+    text-decoration: underline;
+}
+
+.customize-control-radio-buttons input[value="underline"] + span{
+    text-decoration: underline;
+}
+
+.customize-control-radio-buttons input[value="line-through"] + span{
+    text-decoration: line-through;
+}
+
+/*-----------------------------
+       Alpha Color Picker
+-----------------------------*/
+.customize-control-alpha-color .wp-picker-container .iris-picker {
+    border-bottom: none;
+}
+
+.customize-control-alpha-color .wp-picker-container {
+    max-width: 257px;
+}
+
+.customize-control-alpha-color .wp-picker-open + .wp-picker-input-wrap {
+    width: 100%;
+}
+
+.customize-control-alpha-color .wp-picker-input-wrap input[type="text"].wp-color-picker.alpha-color-control {
+    float: left;
+    width: 195px;
+}
+
+.customize-control-alpha-color .wp-picker-input-wrap .button {
+    margin-left: 0;
+    float: right;
+}
+
+.wp-picker-container .wp-picker-open ~ .wp-picker-holder .alpha-color-picker-container {
+    display: block;
+}
+
+.alpha-color-picker-container {
+    border: 1px solid #dfdfdf;
+    border-top: none;
+    display: none;
+    background-color: #fff;
+    padding: 0 11px 10px;
+    position: relative;
+}
+
+.alpha-color-picker-container .ui-widget-content,
+.alpha-color-picker-container .ui-widget-header,
+.alpha-color-picker-wrap .ui-state-focus {
+    background: transparent;
+    border: none;
+}
+
+.alpha-color-picker-wrap a.iris-square-value:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.alpha-color-picker-container .ui-slider {
+    position: relative;
+    z-index: 1;
+    height: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 88%;
+    width: calc( 100% - 28px);
+}
+
+.alpha-color-picker-container .ui-slider-handle,
+.alpha-color-picker-container .ui-widget-content .ui-state-default {
+    color: #777;
+    background-color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    text-decoration: none;
+    position: absolute;
+    z-index: 2;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-top: -2px;
+    top: 0;
+    height: 26px;
+    width: 26px;
+    cursor: ew-resize;
+    font-size: 0;
+    padding: 0;
+    line-height: 27px;
+    margin-left: -14px;
+}
+
+.alpha-color-picker-container .ui-slider-handle.show-opacity {
+    font-size: 12px;
+}
+
+.alpha-color-picker-container .click-zone {
+    width: 14px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    left: 10px;
+}
+
+.alpha-color-picker-container .max-click-zone {
+    right: 10px;
+    left: auto;
+}
+
+.alpha-color-picker-container .transparency {
+    height: 24px;
+    width: 100%;
+    background-color: #fff;
+    background-image: url(../src/color-picker.png);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+    border-radius: 3px;
+    padding: 0;
+    margin-top: -24px;
+}
+
+/* ==========================================================================
+    Alpha Color Picker & Standard Color Picker
+========================================================================== */
+  .customize-control-color .wp-color-result,
+  .customize-control-alpha-color .wp-color-result {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .customize-control-color .wp-color-result .wp-color-result-text,
+  .customize-control-alpha-color .wp-color-result .wp-color-result-text {
+    border-left: none;
+  }
+
+  .wp-picker-holder .iris-picker .iris-palette {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+
+  .wp-picker-container .iris-picker,
+  .wp-picker-container .alpha-color-picker-container {
+    border-radius: 0;
+    border: none;
+  }
+
+  .wp-color-result-text {
+    display: none;
+  }
+
+  .customize-control-color,
+  .customize-control-editorx-alpha-color {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: relative;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .wp-picker-container .wp-color-result.button {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    padding: 0;
+    border: 0;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .wp-picker-holder {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: calc( 100% + 10px);
+    background: #fff;
+    z-index: 999;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    max-width: 321px;
+  }
+
+  .wp-picker-container.wp-picker-active .wp-picker-holder {
+    display: block;
+  }
+
+  .iris-picker.iris-border {
+    width: 100% !important;
+    padding-bottom: 30px !important;
+  }
+
+  .iris-border .iris-picker-inner{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+  }
+
+  .iris-picker .iris-square {
+    width: calc( 100% - 40px) !important;
+    margin-right: 15px;
+  }
+
+  .iris-picker .iris-strip {
+    width: 25px !important;
+    height: 100% !important;
+  }
+
+  .iris-border .iris-palette-container {
+    width: 100%;
+  }
+
+  .wp-picker-holder .iris-picker .iris-palette {
+    border-radius: 50%;
+    width: 25px !important;
+    height: 25px !important;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+  }
+
+  .iris-picker .iris-strip,
+  .alpha-color-picker-container .transparency {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 10px;
+  }
+
+
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+  }
