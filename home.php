@@ -72,12 +72,7 @@ get_header();
 
 								endwhile;
 
-								the_posts_navigation(
-									array(
-										'prev_text' => __( 'Previous Posts', 'editorx' ),
-										'next_text' => __( 'Next Posts', 'editorx' ),
-									)
-								);
+								editorx_post_navigation();
 
 							else :
 

@@ -180,14 +180,77 @@ function editorx_post_navigation(){
 	if ( ( class_exists( 'Jetpack' ) && Jetpack::is_module_active( 'infinite-scroll' ) ) ) {
 		// Support infinite scroll plugins.
 		the_posts_navigation();
-	} elseif ( function_exists( 'the_posts_pagination' ) ) {
-		the_posts_pagination( array(
-			'prev_text'          => '<span>' . esc_html__( 'Prev', 'editorx' ) . '</span>',
-			'next_text'          => '<span>' . esc_html__( 'Next', 'editorx' ) . '</span>',
-			'screen_reader_text' => '<span class="nav-subtitle screen-reader-text">' . esc_html__( 'Page', 'editorx' ) . ' </span>',
-		) );
 	} else {
-		the_posts_navigation();
+		editorx_pagination();
 	}
 
+}
+
+
+/*
+ * Add numeric pagination to blog listing pages
+ */
+function editorx_pagination() {
+
+	if( is_singular() )
+		return;
+
+	global $wp_query;
+
+	if( $wp_query->max_num_pages <= 1 )
+		return;
+
+	$paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
+	$max   = intval( $wp_query->max_num_pages );
+
+	if ( $paged >= 1 )
+		$links[] = $paged;
+
+	if ( $paged >= 3 ) {
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
+
+	if ( ( $paged + 2 ) <= $max ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	} ?>
+
+	<nav class="grid navigation posts-navigation" role="navigation">
+		<div class="pagination-inner grid__item one-whole">
+			<ul class="block--pagination-nav">
+				<?php
+					if ( get_previous_posts_link() )
+						printf( '<li class="prev-post-link">%s</li>', get_previous_posts_link() );
+
+					if ( ! in_array( 1, $links ) ) {
+						$class = 1 == $paged ? ' class="active"' : '';
+
+						printf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+
+						if ( ! in_array( 2, $links ) )
+							echo '<li>...</li>';
+					}
+
+					sort( $links );
+					foreach ( (array) $links as $link ) {
+						$class = $paged == $link ? ' class="active"' : '';
+						printf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( $link ) ), $link );
+					}
+
+					if ( ! in_array( $max, $links ) ) {
+						if ( ! in_array( $max - 1, $links ) )
+							echo '<li>...</li>';
+
+						$class = $paged == $max ? ' class="active"' : '';
+						printf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( $max ) ), $max );
+					}
+
+					if ( get_next_posts_link() )
+						printf( '<li class="next-post-link">%s</li>', get_next_posts_link() );
+				?>
+			</ul>
+		</div>
+	</nav>
+<?php
 }

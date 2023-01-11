@@ -19,6 +19,7 @@
 	- Captions
 	- Galleries
 	- Meta
+	- Pagination
 # plugins
 	- Jetpack infinite scroll
 # Utilities
@@ -2637,6 +2638,28 @@ body:is(.home) .section-index {
 	fill: var(--theme--link-hover-color);
 }
 
+/* Pagination
+--------------------------------------------- */
+.navigation .pagination-inner{
+	padding: 30px 0 10px;
+	border-top: 1px solid var(--theme--form-border-color);
+}
+
+.block--pagination-nav{
+	margin: 0px;
+    padding: 0px;
+    display: flex;
+	list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.site-main .block--pagination-nav li a{
+	border: 1px solid var(--theme--form-border-color);
+}
+
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -3235,12 +3258,24 @@ body:is(.home) .transparent-header{
 
 .section-single  .section-author-box {
     display: flex;
-    align-items: center;
-    gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+    gap: 15px;
+	margin: 30px 0;
+	padding: 30px 15px;
+	box-shadow: rgb(0 0 0 / 15%) 0px 0px 2px 0px;
 }
 
 .section-single  .section-author-box .author-image {
     max-width: 45px;
+}
+
+.section-author-box .author-name h5{
+	margin-bottom: 0px;
+}
+
+.section-author-box .author-desc p{
+	margin: 0px;
 }
 
 .post-navigation .nav-links {
@@ -3299,6 +3334,7 @@ body:is(.home) .transparent-header{
 }
 
 .comments-area .comment-respond {
+	margin-top: 30px;
     padding: 30px 40px 40px;
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -3471,6 +3507,12 @@ body:is(.home) .transparent-header{
 .site-footer .section-copyright a{
     text-decoration: none;
     color: var(--theme--credit-link-color);
+}
+
+/* Related Posts
+--------------------------------------------- */
+.related--single-entry .article .content-inner{
+	padding: 15px;
 }
 
 /* Elementor
