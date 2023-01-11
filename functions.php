@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Define Constants
  */
 if ( ! defined( 'EDITORX_THEME_VERSION' ) )
-	define( 'EDITORX_THEME_VERSION', '1.0.14' );
+	define( 'EDITORX_THEME_VERSION', '1.0.15' );
 	define( 'EDITORX_THEME_DIR', trailingslashit( get_template_directory() ) );
 	define( 'EDITORX_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 

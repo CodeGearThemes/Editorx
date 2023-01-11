@@ -4,7 +4,7 @@ Tags: one-column, two-columns, custom-background, custom-logo, custom-menu, edit
 Requires at least: 5.1
 Tested up to: 6.1
 Requires PHP: 7.4
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -78,10 +78,15 @@ Editorx is distributed under the terms of the GNU GPL
 	http://tgmpluginactivation.com/
 
 == Changelog ==
-= 1.0.14 (Released: Jan 10, 2022) =
+= 1.0.15 (Released: Jan 13, 2023) =
+* Numeric Pagination
+* Post Thumbnails Size Update
+* Minor single post page design fixes
+
+= 1.0.14 (Released: Jan 10, 2023) =
 * Media style load fixes
 
-= 1.0.13 (Released: Jan 02, 2022) =
+= 1.0.13 (Released: Jan 02, 2023) =
 * Demo Importer Added
 * Post Grid Layout Update
 
