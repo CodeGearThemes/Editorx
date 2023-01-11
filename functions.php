@@ -59,6 +59,8 @@ if ( ! function_exists( 'editorx_setup' ) ) :
 		   * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		   */
 		add_theme_support( 'post-thumbnails' );
+		add_image_size( 'editorx-post-thumbnails-grid', 360 );
+		add_image_size( 'editorx-post-thumbnails-list', 750 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(

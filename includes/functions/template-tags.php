@@ -242,8 +242,13 @@ if ( ! function_exists( 'editorx_post_thumbnail' ) ) :
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
+					$editorx_thumb_size = 'editorx-post-thumbnails-list';
+					$editorx_archive_layout	= get_theme_mod( 'editorx_archive_layout', 'grid' );
+					if( $editorx_archive_layout == 'grid' ){
+						$editorx_thumb_size = 'editorx-post-thumbnails-grid';
+					}
 					the_post_thumbnail(
-						'post-thumbnail',
+						$editorx_thumb_size,
 						array(
 							'alt' => the_title_attribute(
 								array(

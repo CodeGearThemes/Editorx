@@ -74,28 +74,33 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1, .h1 {
+ h1, .h1 {
+	margin: 0 0 2rem;
 	font-size: var(--theme--heading-size1);
-	margin: 0.67em 0;
 }
 
 h2, .h2{
+	margin: 0 0 1.8rem;
 	font-size: var(--theme--heading-size2);
 }
 
 h3, .h3{
+	margin: 0 0 1.6rem;
 	font-size: var(--theme--heading-size3);
 }
 
 h4, .h4{
+	margin: 0 0 1.4rem;
 	font-size: var(--theme--heading-size4);
 }
 
 h5, .h5{
+	margin: 0 0 1.2rem;
 	font-size: var(--theme--heading-size5);
 }
 
 h6, .h6{
+	margin: 0 0 1.2rem;
 	font-size: var(--theme--heading-size6);
 }
 
@@ -242,6 +247,7 @@ button,
 [type="reset"],
 [type="submit"] {
 	-webkit-appearance: button;
+	appearance: button;
 }
 
 /**
@@ -325,6 +331,7 @@ textarea {
  */
 [type="search"] {
 	-webkit-appearance: textfield;
+	appearance: textfield;
 	outline-offset: -2px;
 }
 
@@ -422,7 +429,7 @@ h6 {
 
 p {
 	margin-top: 0px;
-	margin-bottom: 1.5em;
+	margin-bottom: 1rem;
 }
 
 dfn,
@@ -2938,8 +2945,9 @@ body:is(.home) .transparent-header{
     border: unset;
     position: absolute;
     background: transparent;
-	color: var(--theme--primary-color);
-    padding: 15px;
+    color: var(--theme--primary-color);
+    padding: 11px 15px;
+    display: flex;
 }
 
 
@@ -3465,6 +3473,12 @@ body:is(.home) .transparent-header{
     color: var(--theme--credit-link-color);
 }
 
+/* Elementor
+--------------------------------------------- */
+.elementor-widget p:last-child{
+	margin-bottom: 0px;
+}
+
 
 /* Media Queries
 --------------------------------------------- */
@@ -3609,37 +3623,31 @@ body:is(.home) .transparent-header{
 	h1,
 	.h1 {
 		font-size: var(--theme--heading-tablet-size1);
-		margin: 0.67em 0;
 	}
 
 	h2,
 	.h2 {
 		font-size: var(--theme--heading-tablet-size2);
-		margin: .75em 0;
 	}
 
 	h3,
 	.h3 {
 		font-size: var(--theme--heading-tablet-size3);
-		margin: .83em 0;
 	}
 
 	h4,
 	.h4 {
 		font-size: var(--theme--heading-tablet-size4);
-		margin: 1.12em 0;
 	}
 
 	h5,
 	.h5 {
 		font-size: var(--theme--heading-tablet-size5);
-		margin: 1.5em 0;
 	}
 
 	h6,
 	.h6 {
 		font-size: var(--theme--heading-tablet-size6);
-		margin: 1.67em 0;
 	}
 
 	.site-header .site-branding img{
@@ -3660,37 +3668,31 @@ body:is(.home) .transparent-header{
 	h1,
 	.h1 {
 		font-size: var(--theme--heading-mobile-size1);
-		margin: 0.67em 0;
 	}
 
 	h2,
 	.h2 {
 		font-size: var(--theme--heading-mobile-size2);
-		margin: .75em 0;
 	}
 
 	h3,
 	.h3 {
 		font-size: var(--theme--heading-mobile-size3);
-		margin: .83em 0;
 	}
 
 	h4,
 	.h4 {
 		font-size: var(--theme--heading-mobile-size4);
-		margin: 1.12em 0;
 	}
 
 	h5,
 	.h5 {
 		font-size: var(--theme--heading-mobile-size5);
-		margin: 1.5em 0;
 	}
 
 	h6,
 	.h6 {
 		font-size: var(--theme--heading-mobile-size6);
-		margin: 1.67em 0;
 	}
 
 	.site-header .site-branding img{

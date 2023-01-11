@@ -48,7 +48,7 @@ $wp_customize->add_control( new Editorx_Control_Tabs ( $wp_customize, 'editorx_a
 ---------------------------------------------*/
 $wp_customize->add_setting( 'editorx_archive_layout',
 	array(
-		'default'           => 'simple',
+		'default'           => 'grid',
 		'sanitize_callback' => 'sanitize_key',
 	)
 );

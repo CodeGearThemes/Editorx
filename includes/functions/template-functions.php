@@ -48,8 +48,8 @@ function editorx_pingback_header() {
 add_action( 'wp_head', 'editorx_pingback_header' );
 
 function editorx_archive_grid(){
-	$editorx_archive_layout	= get_theme_mod( 'editorx_archive_layout', 'simple' );
-	$editorx_archive_grid_columns		= get_theme_mod( 'editorx_archives_grid_columns', '2' );
+	$editorx_archive_layout	= get_theme_mod( 'editorx_archive_layout', 'grid' );
+	$editorx_archive_grid_columns = get_theme_mod( 'editorx_archives_grid_columns', '2' );
 	if( $editorx_archive_layout == 'simple' ) {
 		$editorx_content_class[] 		= 'one-whole';
 	}else{

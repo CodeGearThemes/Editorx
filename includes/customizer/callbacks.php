@@ -9,7 +9,7 @@
  * Archive Grid
  */
 function editorx_archives_callback_grid() {
-	$archive= get_theme_mod( 'editorx_archive_layout', 'simple' );
+	$archive= get_theme_mod( 'editorx_archive_layout', 'grid' );
 
 	if ( 'simple' !== $archive ) {
 		return true;

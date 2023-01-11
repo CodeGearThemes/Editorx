@@ -6,9 +6,9 @@
  *
  * @package Editorx
  */
-$editorx_archive_layout	= get_theme_mod( 'editorx_archive_layout', 'simple' );
-$editorx_archive_sidebar_layout 			= get_theme_mod( 'editorx_archive_sidebar', 'none' );
-$editorx_website_layout 			= get_theme_mod( 'editorx_website_container', 'container' );
+$editorx_archive_layout	= get_theme_mod( 'editorx_archive_layout', 'grid' );
+$editorx_archive_sidebar_layout = get_theme_mod( 'editorx_archive_sidebar', 'none' );
+$editorx_website_layout = get_theme_mod( 'editorx_website_container', 'container' );
 
 /*Main container class*/
 $editorx_main_class[] = 'main-container';
