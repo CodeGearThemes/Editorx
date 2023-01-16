@@ -278,6 +278,9 @@ class Editorx {
 		global $pagenow;
 
 		$screen = get_current_screen();
+
+		$file_path = 'designer/designer.php';
+		$installed_plugins = get_plugins();
 		?>
 		<div class="wrapper codegear--theme-dashboard">
 			<div class="wrap">
@@ -316,9 +319,12 @@ class Editorx {
 									<a id="starter-install" href="<?php echo esc_url( add_query_arg( 'page', $this->starter_menu_slug, admin_url( 'themes.php' ) ) ); ?>" data-status="<?php echo esc_attr( $status ); ?>" class="button button-primary">
 										<?php esc_html_e( 'Starter Sites', 'editorx' ); ?>
 									</a>
-									<a id="required-plugins-install" href="<?php echo esc_url( add_query_arg( 'page', 'install-plugins', admin_url( 'themes.php' ) ) ); ?>" data-status="<?php echo esc_attr( $status ); ?>" class="button button-secondary">
-										<?php esc_html_e( 'Install Recommended Plugins', 'editorx' ); ?>
-									</a>
+
+									<?php if( !isset( $installed_plugins[ $file_path ] )): ?>
+										<a id="required-plugins-install" href="<?php echo esc_url( add_query_arg( 'page', 'install-plugins', admin_url( 'themes.php' ) ) ); ?>" data-status="<?php echo esc_attr( $status ); ?>" class="button button-secondary">
+											<?php esc_html_e( 'Install Recommended Plugins', 'editorx' ); ?>
+										</a>
+									<?php endif; ?>
 
 									<?php if ( 'themes.php' === $pagenow && 'themes' === $screen->base ) { ?>
 										<a href="<?php echo esc_url( add_query_arg( 'page', $this->menu_slug, admin_url( 'themes.php' ) ) ); ?>" class="button">

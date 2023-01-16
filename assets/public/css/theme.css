@@ -496,7 +496,8 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 0em;
+	margin: 0 0 1rem 1rem;
+	padding: 0 0 1rem 1rem;
 }
 
 ul {
@@ -2208,7 +2209,7 @@ body:is(.home) .section-index {
 
 .main-navigation ul {
 	margin: 0px;
-	padding-left: 0;
+	padding: 0px;
 	list-style: none;
 	display: flex;
 	align-items: center;
@@ -2268,6 +2269,11 @@ body:is(.home) .section-index {
 	display: block;
 	text-decoration: none;
 	padding: 30px 20px;
+}
+
+.main-navigation li.btn-primary a{
+	padding: 0px;
+	color: var(--theme--button-text-color);
 }
 
 .header-action-button a:hover,
@@ -2814,7 +2820,7 @@ h6 {
     display: flex;
     text-decoration: none;
     background-color: var(--theme--primary-color);
-    padding: 15px 30px;
+    padding: 15px 20px;
     color: var(--theme--button-text-color);
     font-weight: 600;
     font-size: 15px;
@@ -3517,6 +3523,10 @@ body:is(.home) .transparent-header{
 
 /* Elementor
 --------------------------------------------- */
+.elementor-editor-active .transparent-header{
+    z-index: 0;
+}
+
 .elementor-widget p:last-child{
 	margin-bottom: 0px;
 }
@@ -3621,6 +3631,13 @@ body:is(.home) .transparent-header{
 
 	.main-navigation ul .menu-item-has-children>.sub-menu a{
 		padding: 15px 0px 15px 15px;
+	}
+
+	.main-navigation .navigation--desktop ul > li.btn-primary{
+		max-width: fit-content;
+		padding: 15px 18px;
+		margin-left: 15px;
+		margin-top: 20px;
 	}
 
 	.site-header .mobile-product-search{
