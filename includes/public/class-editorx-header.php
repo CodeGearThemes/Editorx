@@ -70,7 +70,7 @@ if ( !class_exists( 'Editorx_Header' ) ) :
 			<div class="navigation header--main-navigation align--flex-center">
 				<div id="header-navigation" class="header--desktop-navigation header-navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-						<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-menu">
+						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-menu">
 							<line x1="3" y1="12" x2="21" y2="12"/>
 							<line x1="3" y1="6" x2="21" y2="6"/>
 							<line x1="3" y1="18" x2="21" y2="18"/>

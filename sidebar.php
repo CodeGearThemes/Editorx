@@ -12,6 +12,6 @@ if ( ! is_active_sidebar( 'sidebar' ) ) {
 }
 ?>
 
-<aside id="secondary" class="grid__item large--one-third medium--two-fifths small--one-whole sidebar sidebar-widget widget-area" role="complementary">
+<aside id="secondary" class="grid__item large--one-third medium-down--one-whole sidebar sidebar-widget widget-area" role="complementary">
 	<?php dynamic_sidebar( 'sidebar' ); ?>
 </aside><!-- #secondary -->

@@ -25,7 +25,7 @@ $wp_customize->add_control( new Editorx_Control_Heading( $wp_customize, 'editorx
 
 $wp_customize->add_setting( 'editorx_website_primary_color',
 	array(
-		'default'           => '#000000',
+		'default'           => '#003D2B',
 		'sanitize_callback' => 'editorx_sanitize_hex_rgba',
 		'transport'         => 'refresh'
 	)
@@ -42,7 +42,7 @@ $wp_customize->add_control( new Editorx_Control_AlphaColor( $wp_customize, 'edit
 
 $wp_customize->add_setting( 'editorx_website_secondary_color',
 	array(
-		'default'           => '#4E7661',
+		'default'           => '#ade6b9',
 		'sanitize_callback' => 'editorx_sanitize_hex_rgba',
 		'transport'         => 'refresh'
 	)

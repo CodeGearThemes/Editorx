@@ -371,7 +371,24 @@ $wp_customize->add_control( new Editorx_Control_RadioImage( $wp_customize, 'edit
 					'label' => esc_html__( 'Right Sidebar', 'editorx' ),
 					'url'   => '%s/assets/admin/src/layout/right-sidebar@2x.png'
 				)
-			)
+			),
+			'priority'  => 60
+		)
+	)
+);
+
+$wp_customize->add_setting( 'editorx_single_heading_title',
+	array(
+		'default' 			=> '',
+		'sanitize_callback' => 'editorx_sanitize_text'
+	)
+);
+
+$wp_customize->add_control( new Editorx_Control_Heading( $wp_customize, 'editorx_single_heading_title',
+		array(
+			'label'			=> esc_html__( 'Heading', 'editorx' ),
+			'section' 		=> 'editorx_single_section',
+			'priority'  => 65
 		)
 	)
 );
@@ -385,14 +402,147 @@ $wp_customize->add_setting( 'editorx_single_heading_alignment',
 
 $wp_customize->add_control( new Editorx_Control_RadioButtons( $wp_customize, 'editorx_single_heading_alignment',
 	array(
-		'label' 	=> esc_html__( 'Header alignment', 'editorx' ),
+		'label' 	=> esc_html__( 'Title alignment', 'editorx' ),
 		'section' 	=> 'editorx_single_section',
 		'choices' 	=> array(
 			'left' 		=> esc_html__( 'Left', 'editorx' ),
 			'center' 	=> esc_html__( 'Center', 'editorx' ),
+			'right' 	=> esc_html__( 'Right', 'editorx' ),
 		),
 		'priority'  => 70
 	)
 ) );
+
+$wp_customize->add_setting( 'editorx_single_meta_title',
+	array(
+		'default' 			=> '',
+		'sanitize_callback' => 'editorx_sanitize_text'
+	)
+);
+
+$wp_customize->add_control( new Editorx_Control_Heading( $wp_customize, 'editorx_single_meta_title',
+		array(
+			'label'			=> esc_html__( 'Meta', 'editorx' ),
+			'section' 		=> 'editorx_single_section',
+			'priority'  => 75
+		)
+	)
+);
+
+$wp_customize->add_setting( 'editorx_single_meta_alignment',
+	array(
+		'default' 			=> 'left',
+		'sanitize_callback' => 'editorx_sanitize_text'
+	)
+);
+
+$wp_customize->add_control( new Editorx_Control_RadioButtons( $wp_customize, 'editorx_single_meta_alignment',
+	array(
+		'label' 	=> esc_html__( 'Meta alignment', 'editorx' ),
+		'section' 	=> 'editorx_single_section',
+		'choices' 	=> array(
+			'left' 		=> esc_html__( 'Left', 'editorx' ),
+			'center' 	=> esc_html__( 'Center', 'editorx' ),
+			'right' 	=> esc_html__( 'Right', 'editorx' ),
+		),
+		'priority'  => 80
+	)
+) );
+
+$wp_customize->add_setting(
+	'editorx_enable_single_meta_date',
+	array(
+		'default'           => 1,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_enable_single_meta_date',
+		array(
+			'label'         	=> esc_html__( 'Enable date', 'editorx' ),
+			'section'       	=> 'editorx_single_section',
+			'settings'      	=> 'editorx_enable_single_meta_date',
+			'priority'  => 85
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'editorx_enable_single_meta_author',
+	array(
+		'default'           => 1,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_enable_single_meta_author',
+		array(
+			'label'         	=> esc_html__( 'Enable author', 'editorx' ),
+			'section'       	=> 'editorx_single_section',
+			'settings'      	=> 'editorx_enable_single_meta_author',
+			'priority'  => 90
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'editorx_enable_single_meta_comment',
+	array(
+		'default'           => 0,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_enable_single_meta_comment',
+		array(
+			'label'         	=> esc_html__( 'Enable comment count', 'editorx' ),
+			'section'       	=> 'editorx_single_section',
+			'settings'      	=> 'editorx_enable_single_meta_comment',
+			'priority'  => 95
+		)
+	)
+);
+
+$wp_customize->add_setting( 'editorx_single_elements_title',
+	array(
+		'default' 			=> '',
+		'sanitize_callback' => 'editorx_sanitize_text'
+	)
+);
+
+$wp_customize->add_control( new Editorx_Control_Heading( $wp_customize, 'editorx_single_elements_title',
+		array(
+			'label'			=> esc_html__( 'Elements', 'editorx' ),
+			'section' 		=> 'editorx_single_section',
+			'priority'  => 100
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'editorx_single_post_sharing',
+	array(
+		'default'           => 0,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_single_post_sharing',
+		array(
+			'label'         	=> esc_html__( 'Enable social share', 'editorx' ),
+			'section'       	=> 'editorx_single_section',
+			'settings'      	=> 'editorx_single_post_sharing',
+			'priority'  => 105
+		)
+	)
+);
 
 

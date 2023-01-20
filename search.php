@@ -22,7 +22,7 @@ $editorx_content_class   = array();
 if( $editorx_page_layout == 'none' ) {
 	$editorx_content_class[] 		= 'one-whole';
 }else{
-	$editorx_content_class[] = 'large--two-thirds medium--three-quarters small--one-whole';
+	$editorx_content_class[] = 'large--two-thirds medium-down--one-whole';
 }
 
 $editorx_container_class = 'container';

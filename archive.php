@@ -22,7 +22,7 @@ $editorx_content_class   = array();
 if( $editorx_archive_sidebar_layout == 'none' ) {
 	$editorx_content_class[] 		= 'one-whole';
 }else{
-	$editorx_content_class[] = 'large--two-thirds medium--three-fifths small--one-whole';
+	$editorx_content_class[] = 'large--two-thirds medium-down--one-whole';
 }
 $editorx_container_class = 'container';
 if(  $editorx_website_layout === 'container-fluid' ){

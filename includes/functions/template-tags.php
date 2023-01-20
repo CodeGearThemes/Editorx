@@ -31,10 +31,10 @@ if ( ! function_exists( 'editorx_posted_on' ) ) :
 		);
 
 		$raw = '<span class="posted-on">';
+		$raw .= '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>';
 		$raw .= $posted_on;
 		$raw .= '</span>';
-		echo $raw;
-		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $raw; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -47,11 +47,11 @@ if ( ! function_exists( 'editorx_posted_by' ) ) :
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
 			/* translators: %s: post author */
-			__( '<span class="author-label">By </span>%s', 'editorx' ),
+			__( '<span class="author-label screen-reader-text">By</span>%s', 'editorx' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 		$raw = '<span class="byline">';
-		$raw .= '<svg width="16px" version="1.1" id="author" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512">
+		$raw .= '<svg width="15" height="14" version="1.1" id="author" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512">
 						<path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
 						C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
 						c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
@@ -60,7 +60,7 @@ if ( ! function_exists( 'editorx_posted_by' ) ) :
 					</svg>';
 		$raw .=  $byline;
 		$raw .=  '</span>';
-		echo $raw; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $raw; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
 endif;
@@ -72,14 +72,14 @@ if ( ! function_exists( 'editorx_comment' ) ) :
 	function editorx_comment() {
 		if ( is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			$before = '<span class="comments-link">';
-            $before .= '<svg height="12px" viewBox="-21 -47 682.66669 682" width="14px" xmlns="http://www.w3.org/2000/svg">
+            $before .= '<svg height="15" viewBox="-21 -47 682.66669 682" width="14px" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
 							<path d="m552.011719-1.332031h-464.023438c-48.515625 0-87.988281 39.464843-87.988281 87.988281v283.972656c0 48.414063 39.300781 87.816406 87.675781 87.988282v128.863281l185.191407-128.863281h279.144531c48.515625 0 87.988281-39.472657 87.988281-87.988282v-283.972656c0-48.523438-39.472656-87.988281-87.988281-87.988281zm50.488281 371.960937c0 27.835938-22.648438 50.488282-50.488281 50.488282h-290.910157l-135.925781 94.585937v-94.585937h-37.1875c-27.839843 0-50.488281-22.652344-50.488281-50.488282v-283.972656c0-27.84375 22.648438-50.488281 50.488281-50.488281h464.023438c27.839843 0 50.488281 22.644531 50.488281 50.488281zm0 0"/>
 							<path d="m171.292969 131.171875h297.414062v37.5h-297.414062zm0 0"/>
 							<path d="m171.292969 211.171875h297.414062v37.5h-297.414062zm0 0"/>
 							<path d="m171.292969 291.171875h297.414062v37.5h-297.414062zm0 0"/>
 						</svg>';
 			$after = '</span>';
-			echo $before;
+			echo $before; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			comments_popup_link(
 				sprintf(
 					wp_kses(
@@ -110,6 +110,8 @@ if ( ! function_exists( 'editorx_entry_footer' ) ) :
 
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
+
+
 			if( $editorx_single_category ):
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( esc_html__( ', ', 'editorx' ) );
@@ -155,7 +157,8 @@ if ( ! function_exists( 'editorx_entry_footer' ) ) :
 							<path d="m171.292969 291.171875h297.414062v37.5h-297.414062zm0 0"/>
 						</svg>';
 			$after = '</span>';
-			echo $before;
+
+			echo $before; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			comments_popup_link(
 				sprintf(
 					wp_kses(
@@ -170,7 +173,7 @@ if ( ! function_exists( 'editorx_entry_footer' ) ) :
 					wp_kses_post( get_the_title() )
 				)
 			);
-			echo $after;
+			echo $after; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		}
 
 		edit_post_link(
@@ -195,19 +198,27 @@ endif;
 if( ! function_exists( 'editorx_single_postmeta' ) ):
 
 	function editorx_single_postmeta(){
+		$editorx_single_meta_alignment = get_theme_mod( 'editorx_single_meta_alignment', 'left' );
+		$editorx_single_meta_date_enable = get_theme_mod( 'editorx_enable_single_meta_date', 1 );
+		$editorx_single_meta_author_enable = get_theme_mod( 'editorx_enable_single_meta_author', 1 );
+		$editorx_single_meta_comment_enable = get_theme_mod( 'editorx_enable_single_meta_comment', 0 );
+
 		$editorx_single_meta_order 	= get_theme_mod( 'editorx-single-meta-order', array( 'editorx-post-date', 'editorx-post-author', 'editorx-post-comments' ) ); ?>
-		<div class="entry-meta">
+		<div class="entry-meta flex-<?php echo esc_attr( $editorx_single_meta_alignment ); ?>">
 			<?php
 				foreach( $editorx_single_meta_order as $key => $value ){
 
 					switch ( $value ) {
 						case 'editorx-post-date':
+							if( $editorx_single_meta_date_enable )
 							editorx_posted_on();
 						break;
 						case 'editorx-post-author':
+							if( $editorx_single_meta_author_enable )
 							editorx_posted_by();
 						break;
 						case 'editorx-post-comments':
+							if( $editorx_single_meta_comment_enable )
 							editorx_comment();
 							break;
 					}

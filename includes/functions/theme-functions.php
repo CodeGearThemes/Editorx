@@ -56,7 +56,7 @@ if ( ! function_exists( 'editorx_excerpt_more' ) ) :
 		    $link = sprintf( '<a class="read-more more-link" aria-label="%3$s" href="%1$s">%2$s<span class="screen-reader-text">%3$s</span></a>',
 		        get_permalink( get_the_ID() ),
 		        __( 'Read More', 'editorx' ),
-				get_the_title(),
+				get_the_title()
 		    );
 			$excerpt .= $link;
 		}
@@ -93,22 +93,98 @@ function editorx_google_fonts_url() {
 		return; //return early if defaults are active
 	}
 
-	$font_families = array();
-
-	$font_families[] = $headings_font['font'] . ':' . $headings_font['regularweight'];
-	$font_families[] = $body_font['font'] . ':' . $body_font['regularweight'];
-
-	$query_args = array(
-		'family' => urlencode( implode( '|', $font_families ) ),
-		'subset' => urlencode( $subsets ),
-		'display' => urlencode( 'swap' ),
+	/**
+	 * Convert old values of font-weight.
+	 * This avoid issues with old Botiga users that imported demos with
+	 * old customizer settings (google fonts v1 pattern).
+	 *
+	 * @since 1.0.16
+	 */
+	$heading_font_weight = str_replace(
+		array( 'regular', 'italic' ),
+		array( '400', '' ),
+		$headings_font['regularweight']
 	);
 
-	$fonts_url = add_query_arg( $query_args, "//fonts.googleapis.com/css" );
+	if( $headings_font['mediumweight'] != $headings_font['regularweight'] ){
+		$headings_font['mediumweight'] = str_replace(
+			array( 'regular', 'italic' ),
+			array( '400', '' ),
+			$headings_font['mediumweight']
+		);
+		$heading_font_weight .= ';'.$headings_font['mediumweight'];
+	}
+
+	if( $headings_font['boldweight'] != $headings_font['regularweight'] && $headings_font['boldweight'] != $headings_font['mediumweight'] ){
+		$headings_font['boldweight'] = str_replace(
+			array( 'regular', 'italic' ),
+			array( '400', '' ),
+			$headings_font['boldweight']
+		);
+		$heading_font_weight .= ';'.$headings_font['boldweight'];
+	}
+
+	$body_font_weight    = str_replace(
+		array( 'regular', 'italic' ),
+		array( '400', '' ),
+		$body_font['regularweight']
+	);
+
+	if( $body_font['mediumweight'] != $body_font['regularweight'] ){
+		$body_font['mediumweight'] = str_replace(
+			array( 'regular', 'italic' ),
+			array( '400', '' ),
+			$body_font['mediumweight']
+		);
+		$body_font_weight .= ';'.$body_font['mediumweight'];
+	}
+
+	if( $body_font['boldweight'] != $body_font['regularweight'] && $body_font['boldweight'] != $body_font['mediumweight'] ){
+
+		$body_font['boldweight'] = str_replace(
+			array( 'regular', 'italic' ),
+			array( '400', '' ),
+			$body_font['boldweight']
+		);
+
+		$body_font_weight .= ';'.$body_font['boldweight'];
+	}
+
+	$font_families = array(
+		$headings_font['font'] . ':wght@' . $heading_font_weight,
+		$body_font['font'] . ':wght@' . $body_font_weight
+	);
+
+	$fonts_url = add_query_arg( array(
+		'family' => implode( '&family=', $font_families ),
+		'display' => 'swap',
+	), 'https://fonts.googleapis.com/css2' );
+
+	// Load google fonts locally
+	$editorx_googlefont_load_locally = get_theme_mod('editorx_load_google_fonts_locally', 0);
+	if( $editorx_googlefont_load_locally ) {
+		require_once get_theme_file_path( 'vendor/wptt-webfont-loader/wptt-webfont-loader.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+		return wptt_get_webfont_url( esc_url_raw( $fonts_url ) );
+	}
 
 	return esc_url_raw( $fonts_url );
 }
 
+/**
+ * Check if google fonts is being either locally load or not and insert
+ * the needed stylesheet version. That's needed because the new google API (css2)
+ * isn't compatible with wp_enqueue_style().
+ *
+ * Reference: https://core.trac.wordpress.org/ticket/49742#comment:7
+ */
+function editorx_google_fonts_version() {
+	$editorx_googlefont_load_locally = get_theme_mod('editorx_load_google_fonts_locally', 0);
+	if( $editorx_googlefont_load_locally ) {
+		return EDITORX_THEME_VERSION;
+	}
+
+	return NULL;
+}
 
 /**
  * Google fonts preconnect
@@ -186,6 +262,46 @@ function editorx_post_navigation(){
 
 }
 
+/**
+ * Get SVG code. From TwentTwenty
+ */
+function editorx_get_svg_icon( $icon, $echo = false ) {
+	$svg_code = wp_kses(
+		Editorx_SVG_Icons::get_svg_icon( $icon ),
+		array(
+			'svg'     => array(
+				'class'       => true,
+				'xmlns'       => true,
+				'width'       => true,
+				'height'      => true,
+				'viewbox'     => true,
+				'aria-hidden' => true,
+				'role'        => true,
+				'focusable'   => true,
+			),
+			'path'    => array(
+				'fill'      => true,
+				'fill-rule' => true,
+				'd'         => true,
+				'transform' => true,
+			),
+			'polygon' => array(
+				'fill'      => true,
+				'fill-rule' => true,
+				'points'    => true,
+				'transform' => true,
+				'focusable' => true,
+			),
+		)
+	);
+
+	if ( $echo != false ) {
+		echo '<span class="iconx">' . $svg_code . '</span>'; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	} else {
+		return '<span class="iconx">' . $svg_code . '</span>';
+	}
+}
+
 
 /*
  * Add numeric pagination to blog listing pages
@@ -221,33 +337,33 @@ function editorx_pagination() {
 			<ul class="block--pagination-nav">
 				<?php
 					if ( get_previous_posts_link() )
-						printf( '<li class="prev-post-link">%s</li>', get_previous_posts_link() );
+						printf( '<li class="prev-post-link">%s</li>', get_previous_posts_link() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 					if ( ! in_array( 1, $links ) ) {
 						$class = 1 == $paged ? ' class="active"' : '';
 
-						printf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+						printf( '<li%s><a href="%s">%s</a></li>', esc_attr($class), esc_url( get_pagenum_link( 1 ) ), '1' );
 
 						if ( ! in_array( 2, $links ) )
-							echo '<li>...</li>';
+							echo wp_kses_post('<li>...</li>');
 					}
 
 					sort( $links );
 					foreach ( (array) $links as $link ) {
 						$class = $paged == $link ? ' class="active"' : '';
-						printf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( $link ) ), $link );
+						printf( '<li%s><a href="%s">%s</a></li>', esc_attr($class), esc_url( get_pagenum_link( $link ) ), absint($link) );
 					}
 
 					if ( ! in_array( $max, $links ) ) {
 						if ( ! in_array( $max - 1, $links ) )
-							echo '<li>...</li>';
+						echo wp_kses_post('<li>...</li>');
 
 						$class = $paged == $max ? ' class="active"' : '';
-						printf( '<li%s><a href="%s">%s</a></li>', $class, esc_url( get_pagenum_link( $max ) ), $max );
+						printf( '<li%s><a href="%s">%s</a></li>', esc_attr($class), esc_url( get_pagenum_link( $max ) ), absint( $max ) );
 					}
 
 					if ( get_next_posts_link() )
-						printf( '<li class="next-post-link">%s</li>', get_next_posts_link() );
+						printf( '<li class="next-post-link">%s</li>', get_next_posts_link() ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				?>
 			</ul>
 		</div>

@@ -67,6 +67,7 @@ if ( !class_exists( 'Editorx_Customizer' ) ) {
 			require get_template_directory() . '/includes/customizer/callbacks.php';
 			require get_template_directory() . '/includes/customizer/options/general.php';
 			require get_template_directory() . '/includes/customizer/options/typography.php';
+			require get_template_directory() . '/includes/customizer/options/performance.php';
 			require get_template_directory() . '/includes/customizer/options/colors.php';
 			require get_template_directory() . '/includes/customizer/options/header.php';
 			require get_template_directory() . '/includes/customizer/options/layout.php';

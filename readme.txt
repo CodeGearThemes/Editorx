@@ -3,8 +3,8 @@ Contributors: CodeGearThemes
 Tags: one-column, two-columns, custom-background, custom-logo, custom-menu, editor-style, footer-widgets, full-width-template, featured-images, threaded-comments, translation-ready, e-commerce, blog
 Requires at least: 5.1
 Tested up to: 6.1
-Requires PHP: 7.4
-Stable tag: 1.0.15
+Requires PHP: 7.2
+Stable tag: 1.0.16
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -28,7 +28,7 @@ Editorx includes support for Infinite Scroll in Jetpack, WooCommerce.
 
 == Copyright ==
 
-Editorx WordPress Theme, Copyright 2022 CodeGearThemes
+Editorx WordPress Theme, Copyright 2022-2023 CodeGearThemes
 Editorx is distributed under the terms of the GNU GPL
 
 == Credits ==
@@ -48,6 +48,7 @@ Editorx is distributed under the terms of the GNU GPL
 	https://pxhere.com/en/license
 
 	Screenshot Image
+	* https://pxhere.com/en/photo/1328146
 	* https://pxhere.com/en/photo/1630675
 	* https://pxhere.com/en/photo/1622678
 	* https://pxhere.com/en/photo/635440
@@ -67,6 +68,15 @@ Editorx is distributed under the terms of the GNU GPL
 		Copyright 2011 The Montserrat Project Authors (https://github.com/JulietaUla/Montserrat)
         This Font Software is licensed under the SIL Open Font License, Version 1.1. http://scripts.sil.org/OFL
 
+* Feather Icons
+	Copyright (c) 2013-2017 Cole Bemis
+	License: MIT License, https://opensource.org/licenses/MIT
+	Source: https://feathericons.com
+	List of bespoke icons:
+	- Author icon
+	- Calendar icon
+	- Categories icon
+
 * Extension
 	Folder extension/breadcrumb https://github.com/justintadlock/breadcrumb-trail Copyright (c) 2008 - 2017, Justin Tadlock, [GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html)
 
@@ -78,6 +88,14 @@ Editorx is distributed under the terms of the GNU GPL
 	http://tgmpluginactivation.com/
 
 == Changelog ==
+
+= 1.0.16 (Released: Jan 20, 2023) =
+* Hamburger button style control
+* Single Post more controls
+* Minor css bug fixes
+* Button control
+* Social share
+
 = 1.0.15 (Released: Jan 13, 2023) =
 * Numeric Pagination
 * Post Thumbnails Size Update

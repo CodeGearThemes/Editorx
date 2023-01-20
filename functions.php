@@ -7,7 +7,7 @@
  * @author      CodeGearThemes
  * @category    WordPress
  * @package     Editorx
- * @version     1.0.1
+ * @version     1.0.16
  *
  */
 if ( ! defined( 'ABSPATH' ) ) {
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Define Constants
  */
 if ( ! defined( 'EDITORX_THEME_VERSION' ) )
-	define( 'EDITORX_THEME_VERSION', '1.0.15' );
+	define( 'EDITORX_THEME_VERSION', '1.0.16' );
 	define( 'EDITORX_THEME_DIR', trailingslashit( get_template_directory() ) );
 	define( 'EDITORX_THEME_URI', trailingslashit( esc_url( get_template_directory_uri() ) ) );
 
@@ -247,12 +247,6 @@ function editorx_set_elementor_defaults() {
 }
 add_action( 'after_switch_theme', 'editorx_set_elementor_defaults' );
 
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/includes/custom-header.php';
-
 /**
  * Autoload
  */
@@ -268,6 +262,11 @@ require get_template_directory() . '/extension/plugins/plugins.php';
  * Theme dashboard.
  */
 require get_template_directory() . '/includes/dashboard/class-theme-dashboard.php';
+
+/**
+ * SVG Icons
+ */
+require get_template_directory() . '/includes/classes/class-svg-icons.php';
 
 /**
  * Custom template tags for this theme.

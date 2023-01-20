@@ -42,10 +42,12 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'editorx' ); ?></a>
     <div class="wrapper">
+		<?php do_action('editorx_header_before'); ?>
 		<header id="masthead" class="site-header <?php echo esc_attr( $editorx_transparent_class ); ?>">
 			<div class="<?php echo esc_attr( $editorx_container_class ); ?>">
 				<?php get_template_part( 'template-parts/header/layout', $editorx_header_layout ); ?>
 			</div>
 		</header><!-- #masthead -->
+		<?php do_action('editorx_header_after'); ?>
 
 		<div id="content" class="site-content">

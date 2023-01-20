@@ -24,9 +24,9 @@ $editorx_content_class   = array();
 if( $editorx_single_layout == 'none' ) {
 	$editorx_content_class[] 		= 'one-whole';
 }elseif( $editorx_single_layout == 'centered' ){
-	$editorx_content_class[] = 'large--two-thirds medium--three-fifths small--one-whole';
+	$editorx_content_class[] = 'large--two-thirds medium-down--one-whole';
 }else{
-	$editorx_content_class[] = 'large--two-thirds medium--three-fifths small--one-whole';
+	$editorx_content_class[] = 'large--two-thirds medium-down--one-whole';
 	if( $editorx_single_layout === 'left' ){
 		$editorx_content_class[] = 'omega';
 	}else{

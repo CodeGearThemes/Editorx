@@ -27,7 +27,7 @@ $editorx_content_class   = array();
 if( $editorx_post_layout == 'full' ) {
 	$editorx_content_class[] 		= 'one-whole';
 }else{
-	$editorx_content_class[] = 'large--two-thirds medium--three-fifths small--one-whole';
+	$editorx_content_class[] = 'large--two-thirds medium-down--one-whole';
 }
 
 $editorx_container_class = 'container';
