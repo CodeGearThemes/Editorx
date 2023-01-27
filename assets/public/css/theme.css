@@ -252,10 +252,10 @@ button,
     font-weight: 600;
     line-height: 1.2;
     width: fit-content;
+    text-decoration: none;
     font-size: var(--theme--button-desktop-font-size);
     border-radius: var(--theme--button-border-radius);
 	letter-spacing: var(--theme--button-letter-spacing);
-    text-decoration: var(--theme--button-text-transform);
     padding: var(--theme--button-desktop-top-bottom-padding) 30px;
 	appearance: button;
 	-webkit-appearance: button;
@@ -726,6 +726,10 @@ body:is(.home) .section-index {
 .section-index .sticky-sidebar .sidebar-widget{
 	top: 30px;
 	position: sticky;
+}
+
+.scroll-lock{
+	overflow: hidden;
 }
 
 /*============================================================================
@@ -2298,6 +2302,15 @@ body:is(.home) .section-index {
 	color: var(--theme--button-text-color);
 }
 
+.main-navigation li.btn-primary a:after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0px;
+}
+
 .header-action-button a:hover,
 .header-action-button a:focus{
 	outline: thin dotted #1b1a1a;
@@ -3593,6 +3606,10 @@ body:is(.home) .transparent-header{
 	margin-bottom: 0px;
 }
 
+.elementor-image-gallery .gallery-item{
+	max-width: unset !important;
+}
+
 
 /* Media Queries
 --------------------------------------------- */
@@ -3605,32 +3622,33 @@ body:is(.home) .transparent-header{
 		padding: 15px;
 	}
 
-	.site-header .menu-toggle{
+	.site-header .menu-toggle,
+	.site-header .menu-toggle:hover{
 		width: 46px;
 		height: 46px;
-		padding: 5px;
-		border: unset;
 		display: block;
-		padding: unset;
 		box-shadow: unset;
 		border-radius: 30px;
-		color: var(--theme--button-hanburger-color);
-		background: var(--theme--button-hanburger-background);;
+		border: unset !important;
+		padding: unset !important;
+		color: var(--theme--button-hamburger-color) !important;
+		background: var(--theme--button-hamburger-background) !important;
 	}
 
 	.site-header .mobile-menu__toggle{
 		top: 14px;
 		right: 15px;
-		position: absolute;
-		display: flex !important;
-		align-items: center;
-		justify-content: center;
-		background: unset;
-		border: unset;
-		color: var(--theme--primary-color);
-		padding: 0px;
 		width: 46px;
 		height: 46px;
+		padding: 0px;
+		background: unset;
+		position: absolute;
+		align-items: center;
+		justify-content: center;
+		border: unset !important;
+		display: flex !important;
+		color: var(--theme--button-hamburger-color) !important;
+		background: var(--theme--button-hamburger-background) !important;
 	}
 
 	.main-navigation {

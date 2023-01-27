@@ -189,8 +189,8 @@ function editorx_public_scripts(){
 
 			--theme--button-border-radius: " . esc_attr ( $editorx_button_border_radius ) .";
 
-			--theme--button-hanburger-color: " . esc_attr ( $editorx_button_hamburger_color ) .";
-			--theme--button-hanburger-background: " . esc_attr ( $editorx_button_hamburger_background ) .";
+			--theme--button-hamburger-color: " . esc_attr ( $editorx_button_hamburger_color ) .";
+			--theme--button-hamburger-background: " . esc_attr ( $editorx_button_hamburger_background ) .";
 
 			--theme--footer-color: ". esc_attr ( $editorx_footer_text_color ) .";
 			--theme--footer-heading-color: ". esc_attr ( $editorx_footer_heading_color ) .";

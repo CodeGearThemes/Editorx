@@ -32,7 +32,9 @@
 	}
 
 	button.onclick = function () {
+		document.body.classList.add('scroll-lock');
 		if (-1 !== container.className.indexOf('toggled')) {
+			console.log('test');
 			container.className = container.className.replace(' toggled', '');
 			button.setAttribute('aria-expanded', 'false');
 			buttonClose.setAttribute('aria-expanded', 'false');
@@ -44,6 +46,7 @@
 			button.setAttribute('aria-expanded', 'true');
 			buttonClose.setAttribute('aria-expanded', 'true');
 			menu.setAttribute('aria-expanded', 'true');
+
 		}
 	};
 
@@ -57,6 +60,7 @@
 			button.setAttribute('aria-expanded', 'true');
 			buttonClose.setAttribute('aria-expanded', 'true');
 		}
+		document.body.classList.remove('scroll-lock');
 	}
 
 	//Get all the link elements within the menu.
@@ -91,12 +95,12 @@
 			self = self.parentElement;
 		}
 	}
-	
+
 	const  focusableElements =
 	'button, [href], [tabindex]:not([tabindex="-1"])';
-	const mobileMenu = document.getElementById('site-navigation'); 
+	const mobileMenu = document.getElementById('site-navigation');
 
-	const firstFocusableElement = mobileMenu.querySelectorAll(focusableElements)[0]; 
+	const firstFocusableElement = mobileMenu.querySelectorAll(focusableElements)[0];
 	const focusableContent = mobileMenu.querySelectorAll(focusableElements);
 	const lastFocusableElement = focusableContent[focusableContent.length - 1];
 
@@ -108,9 +112,9 @@
 				return;
 			}
 
-			if (e.shiftKey) { 
+			if (e.shiftKey) {
 				if (document.activeElement === firstFocusableElement) {
-					lastFocusableElement.focus(); 
+					lastFocusableElement.focus();
 					e.preventDefault();
 				}
 			} else { // if tab key is pressed
