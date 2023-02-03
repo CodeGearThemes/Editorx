@@ -256,7 +256,7 @@ button,
     font-size: var(--theme--button-desktop-font-size);
     border-radius: var(--theme--button-border-radius);
 	letter-spacing: var(--theme--button-letter-spacing);
-    padding: var(--theme--button-desktop-top-bottom-padding) 30px;
+    padding: var(--theme--button-desktop-top-bottom-padding) 20px;
 	appearance: button;
 	-webkit-appearance: button;
 }
@@ -2859,6 +2859,7 @@ h6 {
 }
 
 .btn,
+.button,
 .read-more,
 .btn-primary,
 .search-form .search-submit,
@@ -2874,10 +2875,11 @@ h6 {
     border-radius: var(--theme--button-border-radius);
 	letter-spacing: var(--theme--button-letter-spacing);
     text-decoration: var(--theme--button-text-transform);
-    padding: var(--theme--button-desktop-top-bottom-padding) 30px;
+    padding: var(--theme--button-desktop-top-bottom-padding) 20px;
 }
 
 .btn:hover,
+.button:hover,
 .btn-primary:hover,
 .read-more:hover,
 .read-more:focus,

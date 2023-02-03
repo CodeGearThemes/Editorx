@@ -20,8 +20,8 @@ function editorx_woocommerce_setup() {
 	add_theme_support(
 		'woocommerce',
 		array(
-			'thumbnail_image_width' => 150,
-			'single_image_width'    => 300,
+			'thumbnail_image_width' => 320,
+			'single_image_width'    => 768,
 			'product_grid'          => array(
 				'default_rows'    => 3,
 				'min_rows'        => 1,
@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'editorx_woocommerce_setup' );
  * @return void
  */
 function editorx_woocommerce_scripts() {
-	wp_enqueue_style( 'editorx-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( 'editorx-woocommerce-style', get_template_directory_uri() . '/assets/public/css/woocommerce.css', array(), EDITORX_THEME_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -92,8 +92,8 @@ add_filter( 'body_class', 'editorx_woocommerce_active_body_class' );
  */
 function editorx_woocommerce_related_products_args( $args ) {
 	$defaults = array(
-		'posts_per_page' => 3,
-		'columns'        => 3,
+		'posts_per_page' => 4,
+		'columns'        => 4,
 	);
 
 	$args = wp_parse_args( $defaults, $args );
@@ -101,6 +101,19 @@ function editorx_woocommerce_related_products_args( $args ) {
 	return $args;
 }
 add_filter( 'woocommerce_output_related_products_args', 'editorx_woocommerce_related_products_args' );
+
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_after_shop_loop' , 'woocommerce_result_count', 20 );
+
+function editorx_change_sale_content($content, $post, $product) {
+	$content = '<span class="onsale">'.__( 'Sale', 'editorx' ).'</span>';
+   return $content;
+}
+add_filter('woocommerce_sale_flash', 'editorx_change_sale_content', 10, 3);
 
 /**
  * Remove default WooCommerce wrapper.
@@ -118,7 +131,12 @@ if ( ! function_exists( 'editorx_woocommerce_wrapper_before' ) ) {
 	 */
 	function editorx_woocommerce_wrapper_before() {
 		?>
-			<main id="primary" class="site-main">
+		<div class="section-woocommerce section--woocommerce-template">
+			<div class="main-content main-container">
+				<div class="container">
+					<div class="grid">
+						<div id="primary" class="grid__item one-whole content-area">
+							<main id="main" class="site-main">
 		<?php
 	}
 }
@@ -134,23 +152,57 @@ if ( ! function_exists( 'editorx_woocommerce_wrapper_after' ) ) {
 	 */
 	function editorx_woocommerce_wrapper_after() {
 		?>
-			</main><!-- #main -->
+							</main><!-- #main -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<?php
 	}
 }
 add_action( 'woocommerce_after_main_content', 'editorx_woocommerce_wrapper_after' );
 
-/**
- * Sample implementation of the WooCommerce Mini Cart.
- *
- * You can add the WooCommerce Mini Cart to header.php like so ...
- *
-	<?php
-		if ( function_exists( 'editorx_woocommerce_header_cart' ) ) {
-			editorx_woocommerce_header_cart();
-		}
-	?>
- */
+add_action( 'woocommerce_before_single_product_summary', 'editorx_single_product_wrapper_start', 0);
+function editorx_single_product_wrapper_start(){ ?>
+	<div class="single-product__gallery single-product__content">
+		<div class="single-product__main">
+<?php
+}
+
+add_action( 'woocommerce_before_single_product_summary', 'editorx_single_product_wrapper_end', 100);
+function editorx_single_product_wrapper_end(){ ?>
+	</div>
+<?php
+}
+
+
+add_action( 'woocommerce_after_single_product_summary', 'editorx_single_product_wrapper_end', 0);
+function editorx_single_product_after_summery(){ ?>
+	</div>
+<?php
+}
+
+add_action( 'woocommerce_after_quantity_input_field', 'editorx_product_quantity_start', 10);
+function editorx_product_quantity_start(){ ?>
+	<button type="button" class="plus" >
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-plus">
+			<line x1="12" y1="5" x2="12" y2="19"/>
+			<line x1="5" y1="12" x2="19" y2="12"/>
+		</svg>
+	</button>
+<?php
+}
+
+add_action( 'woocommerce_before_quantity_input_field', 'editorx_product_quantity_end', 10);
+function editorx_product_quantity_end(){ ?>
+	<button type="button" class="minus" >
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-minus">
+			<line x1="5" y1="12" x2="19" y2="12"/>
+		</svg>
+	</button>
+<?php
+}
 
 if ( ! function_exists( 'editorx_woocommerce_cart_link_fragment' ) ) {
 	/**
@@ -225,3 +277,45 @@ if ( ! function_exists( 'editorx_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+function editorx_woocommerce_page_header() {
+
+	if ( !is_shop() && !is_product_category() && !is_product_tag() ) {
+		return;
+	}
+
+	//Remove elements
+	add_filter( 'woocommerce_show_page_title', '__return_false' );
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+	remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description' );
+	remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description' );
+
+
+	$editorx_shop_page = get_option( 'woocommerce_shop_page_id' ); ?>
+	<div class="woocommerce-page-header page-header entry-header <?php if( has_post_thumbnail( $editorx_shop_page ) ): ?> has-thumbnail <?php endif; ?>">
+		<div class="block--header-main">
+			<?php if( has_post_thumbnail( $editorx_shop_page ) ): ?>
+				<?php echo get_the_post_thumbnail( $editorx_shop_page, array( 1920, 300) ); ?>
+			<?php endif; ?>
+
+			<div class="block--header-inner">
+				<div class="container">
+					<?php
+						if ( is_shop() || is_product_category() || is_product_tag() ) : ?>
+							<h1 class="woocommerce-products-header__title page-title entry-title"><?php woocommerce_page_title(); ?></h1>
+						<?php endif; ?>
+						<?php
+						if( is_shop() || is_product_category() || is_product_tag() ) {
+							woocommerce_taxonomy_archive_description();
+							woocommerce_product_archive_description();
+						}
+					?>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<?php
+}
+add_action( 'editorx_header_after', 'editorx_woocommerce_page_header' );
+
