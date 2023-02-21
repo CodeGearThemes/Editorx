@@ -4,7 +4,7 @@ Tags: one-column, two-columns, custom-background, custom-logo, custom-menu, edit
 Requires at least: 5.1
 Tested up to: 6.1
 Requires PHP: 7.2
-Stable tag: 1.0.16
+Stable tag: 1.0.2
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -88,6 +88,9 @@ Editorx is distributed under the terms of the GNU GPL
 	http://tgmpluginactivation.com/
 
 == Changelog ==
+
+= 1.0.2 (Released: Feb 21, 2023) =
+* WooCommerce integration
 
 = 1.0.16 (Released: Jan 20, 2023) =
 * Hamburger button style control
