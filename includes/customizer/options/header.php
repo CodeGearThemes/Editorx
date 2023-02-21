@@ -50,6 +50,44 @@ $wp_customize->add_control( new Editorx_Control_Slider( $wp_customize, 'editorx_
 	)
 ) );
 
+$wp_customize->add_setting(
+	'editorx_enable_site_title',
+	array(
+		'default'           => 1,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_enable_site_title',
+		array(
+			'label'         	=> esc_html__( 'Enable site title', 'editorx' ),
+			'section'       	=> 'title_tagline',
+			'settings'      	=> 'editorx_enable_site_title',
+		)
+	)
+);
+
+$wp_customize->add_setting(
+	'editorx_enable_site_tagline',
+	array(
+		'default'           => 0,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_enable_site_tagline',
+		array(
+			'label'         	=> esc_html__( 'Enable site tagline', 'editorx' ),
+			'section'       	=> 'title_tagline',
+			'settings'      	=> 'editorx_enable_site_tagline',
+		)
+	)
+);
+
 
 /**
  * Main header
@@ -90,6 +128,25 @@ $wp_customize->add_control(
 	)
 );
 
+$wp_customize->add_setting(
+	'editorx_enable_header_search',
+	array(
+		'default'           => 1,
+		'sanitize_callback' => 'editorx_sanitize_checkbox',
+	)
+);
+$wp_customize->add_control(
+	new Editorx_Control_Switch(
+		$wp_customize,
+		'editorx_enable_header_search',
+		array(
+			'label'         	=> esc_html__( 'Enable Header Search', 'editorx' ),
+			'section'       	=> 'editorx_main_header',
+			'settings'      	=> 'editorx_enable_header_search',
+		)
+	)
+);
+
 
 $wp_customize->add_setting(
 	'editorx_enable_social_icons',
@@ -110,23 +167,44 @@ $wp_customize->add_control(
 	)
 );
 
-
-$wp_customize->add_setting(
-	'editorx_enable_header_search',
-	array(
-		'default'           => 1,
-		'sanitize_callback' => 'editorx_sanitize_checkbox',
-	)
-);
-$wp_customize->add_control(
-	new Editorx_Control_Switch(
-		$wp_customize,
-		'editorx_enable_header_search',
+if ( class_exists( 'WooCommerce' ) ) {
+	$wp_customize->add_setting(
+		'editorx_enable_header_account',
 		array(
-			'label'         	=> esc_html__( 'Enable Header Search', 'editorx' ),
-			'section'       	=> 'editorx_main_header',
-			'settings'      	=> 'editorx_enable_header_search',
+			'default'           => 0,
+			'sanitize_callback' => 'editorx_sanitize_checkbox',
 		)
-	)
-);
+	);
+	$wp_customize->add_control(
+		new Editorx_Control_Switch(
+			$wp_customize,
+			'editorx_enable_header_account',
+			array(
+				'label'         	=> esc_html__( 'Enable Account', 'editorx' ),
+				'section'       	=> 'editorx_main_header',
+				'settings'      	=> 'editorx_enable_header_account',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'editorx_enable_header_mincart',
+		array(
+			'default'           => 0,
+			'sanitize_callback' => 'editorx_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		new Editorx_Control_Switch(
+			$wp_customize,
+			'editorx_enable_header_mincart',
+			array(
+				'label'         	=> esc_html__( 'Enable Mini Cart', 'editorx' ),
+				'section'       	=> 'editorx_main_header',
+				'settings'      	=> 'editorx_enable_header_mincart',
+			)
+		)
+	);
+}
+
 

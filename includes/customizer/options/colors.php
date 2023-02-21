@@ -87,6 +87,23 @@ $wp_customize->add_control( new Editorx_Control_Heading( $wp_customize, 'editorx
 	)
 );
 
+$wp_customize->add_setting( 'editorx_website_text_color',
+	array(
+		'default'           => '#121212',
+		'sanitize_callback' => 'editorx_sanitize_hex_rgba',
+		'transport'         => 'refresh'
+	)
+);
+
+$wp_customize->add_control( new Editorx_Control_AlphaColor( $wp_customize, 'editorx_website_text_color',
+		array(
+			'label'         	=> esc_html__( 'Text', 'editorx' ),
+			'section'       	=> 'colors',
+            'priority' 			=> 7
+		)
+	)
+);
+
 $wp_customize->add_setting( 'editorx_colors_website_divider',
 	array(
 		'sanitize_callback' => 'editorx_sanitize_text'

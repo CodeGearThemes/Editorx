@@ -26,6 +26,8 @@ function editorx_public_scripts(){
 	$editorx_primary_color				= get_theme_mod( 'editorx_website_primary_color', '#003D2B' );
 	$editorx_secondary_color			= get_theme_mod( 'editorx_website_secondary_color', '#4E7661' );
 
+	$editorx_base_color					= get_theme_mod( 'editorx_website_text_color', '#121212' );
+
 
 	$font_body 						= json_decode( get_theme_mod( 'editorx_base_font', $defaults ), true );
 	if ( 'System default' === $font_body['font'] ) {
@@ -129,6 +131,8 @@ function editorx_public_scripts(){
 
 			--theme--primary-color:		". esc_attr ( $editorx_primary_color ) .";
 			--theme--secondary-color:	". esc_attr( $editorx_secondary_color ) .";
+
+			--theme--base-color:	". esc_attr ( $editorx_base_color ) .";
 
 			--theme--website-base-font-size:		". absint( $editorx_base_font_size ) ."px;
 			--theme--website-base-tablet-font-size: ". absint( $editorx_base_tablet_font_size ) ."px;

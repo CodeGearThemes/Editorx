@@ -42,14 +42,14 @@ get_header();
 ?>
 
 <div class="section-page section--page-template">
-	<?php if( $editorx_page_header ): ?>
+	<?php if( $editorx_page_header || is_cart() || is_checkout() ): ?>
 		<?php if( !is_front_page()  ): ?>
 			<div class="page-header-wrapper">
 				<div class="<?php echo esc_attr( $editorx_container_class ); ?>">
 					<div class="page-header entry-header">
 						<?php
 							the_title( '<h1 class="entry-title">', '</h1>' );
-							if( $editorx_page_breadcrumb ):
+							if( $editorx_page_breadcrumb || is_cart() || is_checkout() ):
 								editorx_breadcrumb();
 							endif;
 						?>

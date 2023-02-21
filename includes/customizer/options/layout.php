@@ -310,7 +310,7 @@ $wp_customize->add_control(
 		'editorx_enable_page_header',
 		array(
 			'label'         	=> esc_html__( 'Enable page heading', 'editorx' ),
-			'section'       	=> 'editorx_main_header',
+			'section'       	=> 'editorx_page_section',
 			'settings'      	=> 'editorx_enable_page_header',
 		)
 	)
@@ -329,7 +329,7 @@ $wp_customize->add_control(
 		'editorx_enable_page_breadcrumb',
 		array(
 			'label'         	=> esc_html__( 'Enable page breadcrumb', 'editorx' ),
-			'section'       	=> 'editorx_main_header',
+			'section'       	=> 'editorx_page_section',
 			'settings'      	=> 'editorx_enable_page_breadcrumb',
 		)
 	)

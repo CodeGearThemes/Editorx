@@ -87,11 +87,11 @@
 				);
 				elementMediumWeight.prop('disabled', 'disabled');
 			}
-			if(elementMediumWeightCount == 0) {
-				elementMediumWeight.append(
+			if(elementBoldWeight == 0) {
+				elementBoldWeight.append(
 					$('<option></option>').val('').html('Not Available')
 				);
-				elementMediumWeight.prop('disabled', 'disabled');
+				elementBoldWeight.prop('disabled', 'disabled');
 			}
 
 			// Update the font category based on the selected font

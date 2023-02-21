@@ -126,6 +126,7 @@ class Editorx_Control_Typography extends WP_Customize_Control {
 						<div class="weight-style">
 							<select class="google-fonts-mediumweight-style">
 								<?php
+								print_r( $this->fontValues );
 									foreach( $this->fontList[$this->fontListIndex]->variants as $key => $value ) {
 										echo '<option value="' . esc_attr( $value ) . '" ' . selected( $this->fontValues->mediumweight, $value, false ) . '>' . esc_html( $value ) . '</option>';
 									}

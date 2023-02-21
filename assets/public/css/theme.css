@@ -562,13 +562,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #1b1a1a;
+	color: var(--theme--primary-color);
 }
 
 a:visited,
 a:focus,
 a:active{
-	color: #1b1a1a;;
+	color: var(--theme--primary-color);
 }
 
 a:hover{
@@ -587,24 +587,31 @@ a:active {
 /* Forms
 --------------------------------------------- */
 button,
+.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: #ccc;
 	border-radius: 0;
+	color: var(--theme--button-text-color);
+	border-color:var(--theme--primary-color);
 	background: var(--theme--primary-color);
-	color: #ffffff;
 	line-height: 1;
 	padding: 15px 30px;
 	border-radius: 50px;
+}
+
+.button:focus,
+.button:visited,
+.button:active{
+	color: var(--theme--button-text-color);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc;
+	border-color: var(--theme--primary-color);
 }
 
 button:active,
@@ -615,7 +622,7 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	border-color: var(--theme--primary-color);;
 }
 
 input[type="text"],
@@ -2485,11 +2492,11 @@ body:is(.home) .section-index {
 }
 
 .comments-area .reply .comment-reply-link {
-	background: #000;
 	color: #fff;
 	padding: 5px 15px;
 	font-size: 12px;
 	border-radius: 0px;
+	background: #000;
 	text-decoration: none;
 }
 
@@ -2828,8 +2835,8 @@ body {
 	line-height: var(--theme--website-base-line-height);
 	letter-spacing: var(--theme--website-base-letter-spacing);
 	text-transform: var(--theme--website-base-text-transform);
+	color: var(--theme--base-color);
 	overflow-x: hidden;
-	color: #46494e;
 	margin: 0px;
 }
 
@@ -3023,11 +3030,170 @@ body:is(.home) .transparent-header{
     border: unset;
     position: absolute;
     background: transparent;
-    color: var(--theme--primary-color);
+    color: var(--theme--base-color);
     padding: 11px 15px;
     display: flex;
 }
 
+.header-block__widget{
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.header-block__widget .nav--cart-item{
+	position: relative;
+}
+
+.header-block__widget .nav--cart-item .count{
+	width: 20px;
+    font-size: 12px;
+    height: 20px;
+    display: flex;
+    color: #fff;
+    top: -7px;
+    right: -10px;
+    line-height: 1;
+	position: absolute;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    background: var(--theme--primary-color);
+}
+
+.header-block__widget .site-header-cart {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: relative;
+}
+
+.header-block__widget .site-header-cart .cart-contents {
+	text-decoration: none;
+	color: var(--theme--base-color);
+}
+
+.header-block__widget .site-header-cart .widget_shopping_cart {
+	display: none;
+}
+
+.header-block__widget .site-header-cart:hover .minicart__item{
+	display: block !important;
+}
+
+.header-block__widget .site-header-cart .minicart__item{
+	width: 375px;
+    position: absolute;
+	background: #fff;
+    right: 0;
+}
+
+.header-block__widget .site-header-cart .widget_shopping_cart{
+	padding-top: 26px;
+	background: transparent;
+}
+
+.header-block__widget .site-header-cart .widget_shopping_cart {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	z-index: 1;
+	left: -999em;
+	display: block;
+	box-shadow: 0 3px 3px rgb(221 221 221 / 10%);
+}
+
+.header-block__widget .site-header-cart .widget_shopping_cart_content{
+	background: #fff;
+}
+
+.header-block__widget .site-header-cart:hover .widget_shopping_cart,
+.header-block__widget .site-header-cart.focus .widget_shopping_cart {
+	left: 0;
+	display: block;
+}
+
+.header-block__widget .site-header-cart .product_list_widget {
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+
+.header-block__widget .site-header-cart .product_list_widget li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    grid-gap: 10px;
+    padding: 20px 30px 20px 145px;
+    min-height: 120px;
+    background: transparent;
+    position: relative;
+    max-width: 100%;
+}
+
+.header-block__widget .site-header-cart .product_list_widget li img{
+    top: 20px;
+    left: 30px;
+	width: 100px;
+    height: 100px;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--theme--form-border-color);
+}
+
+.header-block__widget .site-header-cart .product_list_widget li .quantity{
+	padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    border: none;
+    background: transparent;
+    display: flex;
+    grid-gap: 4px;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    min-width: 85px;
+    font-weight: 600;
+    width: 100%;
+    font-size: 14px;
+    display: block;
+}
+
+.header-block__widget .site-header-cart .woocommerce-mini-cart__empty-message{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 15px;
+    margin: 0px;
+}
+
+.header-block__widget .site-header-cart .woocommerce-mini-cart__total{
+	margin: 0px;
+    padding: 20px 30px 0;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.header-block__widget .woocommerce-mini-cart__buttons{
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+	gap: 15px;
+    margin: 0px;
+	padding: 20px;
+}
+
+.header-block__widget .woocommerce-mini-cart__buttons .button{
+	flex: 1 1 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--theme--button-text-color);
+}
 
 /*-----------------------------------------
         Page Header
@@ -3496,7 +3662,7 @@ body:is(.home) .transparent-header{
     right: 0;
     top: 0;
     border: 0px;
-    color: #000;
+    color: var(--theme--base-color);
     padding: 16px;
 }
 
@@ -3562,6 +3728,7 @@ body:is(.home) .transparent-header{
 }
 
 .site-footer .widget ul li a{
+	display: block;
     text-decoration: none;
 }
 
@@ -3877,7 +4044,7 @@ body:is(.home) .transparent-header{
 		height: 30px;
 		padding: 0px;
 		background: unset;
-		color: #000;
+		color: var(--theme--base-color);
 		border: unset;
 		top: 2px;
 		position: relative;
