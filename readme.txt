@@ -89,7 +89,7 @@ Editorx is distributed under the terms of the GNU GPL
 
 == Changelog ==
 
-= 1.0.2 (Released: Feb 21, 2023) =
+= 1.0.20 (Released: Feb 21, 2023) =
 * WooCommerce integration
 
 = 1.0.16 (Released: Jan 20, 2023) =
